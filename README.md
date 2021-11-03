@@ -1,1 +1,1 @@
-# What-s-Wrong-
+# WhatsWrong
