@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-26:12
+ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-25:12
 MERGED from [androidx.core:core-ktx:1.7.0] C:\Users\윤상원\.gradle\caches\transforms-3\b810fbd67bac4a05cbf88abe5cff703f\transformed\jetified-core-ktx-1.7.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\윤상원\.gradle\caches\transforms-3\0a2abf7e181c5770d82904112c96f8dd\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\윤상원\.gradle\caches\transforms-3\2fcd23c636c50850abd51fb9ed6d82a2\transformed\constraintlayout-2.1.1\AndroidManifest.xml:2:1-11:12
@@ -40,25 +40,25 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\윤상원\.gradl
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\윤상원\.gradle\caches\transforms-3\924db5bfe5c57b30b73f6f45c724441e\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\윤상원\.gradle\caches\transforms-3\42ffa41eed66a835645ab26fba929fd1\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\윤상원\.gradle\caches\transforms-3\4ec61633d6d3cdffce59747229c850df\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-26:12
-INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-26:12
+INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-25:12
+INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-25:12
 	package
 		ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml
-		ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-26:12
+		ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-25:12
 		INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml
-		ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-26:12
+		ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:1-25:12
 		INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:5:5-24:19
+ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:5:5-23:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\윤상원\.gradle\caches\transforms-3\0a2abf7e181c5770d82904112c96f8dd\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\윤상원\.gradle\caches\transforms-3\0a2abf7e181c5770d82904112c96f8dd\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\윤상원\.gradle\caches\transforms-3\2fcd23c636c50850abd51fb9ed6d82a2\transformed\constraintlayout-2.1.1\AndroidManifest.xml:9:5-20
@@ -98,13 +98,13 @@ ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifes
 	android:name
 		ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:18:27-74
 activity#com.example.whatswrong.MyCommunity
-ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:22:9-48
+ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:21:9-48
 	android:name
-		ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:22:19-46
+		ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:21:19-46
 activity#com.example.whatswrong.MainActivity
-ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:23:9-49
+ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:22:9-49
 	android:name
-		ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:23:19-47
+		ADDED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:22:19-47
 uses-sdk
 INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml

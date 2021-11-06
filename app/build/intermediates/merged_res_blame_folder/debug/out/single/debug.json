@@ -8,6 +8,10 @@
         "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\layout_community_class.xml.flat",
+        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\layout\\community_class.xml"
+    },
+    {
         "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable_reading_glasses.png.flat",
         "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\reading_glasses.png"
     },
@@ -28,12 +32,12 @@
         "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\logo.png"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable_community.png.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\community.png"
-    },
-    {
         "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable_community.png.flat",
+        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\community.png"
     },
     {
         "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
@@ -42,6 +46,10 @@
     {
         "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable_user_button.png.flat",
         "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\user_button.png"
+    },
+    {
+        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\layout_post.xml.flat",
+        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\layout\\post.xml"
     },
     {
         "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
@@ -60,12 +68,12 @@
         "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
-    },
-    {
         "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable_plus.png.flat",
         "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\plus.png"
+    },
+    {
+        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
         "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\layout_community_my.xml.flat",
@@ -86,6 +94,10 @@
     {
         "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\layout_community_main.xml.flat",
         "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\layout\\community_main.xml"
+    },
+    {
+        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable_post_bg.xml.flat",
+        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\post_bg.xml"
     },
     {
         "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",

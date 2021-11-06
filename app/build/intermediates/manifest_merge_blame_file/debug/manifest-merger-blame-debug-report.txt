@@ -11,7 +11,7 @@
 9-->C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:5:5-24:19
+11-->C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:5:5-23:19
 12        android:allowBackup="true"
 12-->C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -46,11 +46,11 @@
 28            </intent-filter>
 29        </activity>
 30        <activity android:name="com.example.whatswrong.MyCommunity" />
-30-->C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:22:9-48
-30-->C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:22:19-46
+30-->C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:21:9-48
+30-->C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:21:19-46
 31        <activity android:name="com.example.whatswrong.MainActivity" />
-31-->C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:23:9-49
-31-->C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:23:19-47
+31-->C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:22:9-49
+31-->C:\Programming\app_programming\WhatsWrong\app\src\main\AndroidManifest.xml:22:19-47
 32    </application>
 33
 34</manifest>
