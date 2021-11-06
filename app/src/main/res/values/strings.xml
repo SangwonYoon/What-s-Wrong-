@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WhatsWrong</string>
+    <string name="q_a"><![CDATA[Q&A]]></string>
 </resources>
