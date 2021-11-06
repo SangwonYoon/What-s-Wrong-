@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WhatsWrong">
         <activity
-            android:name=".MainCommunity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MyCommunity"/>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainCommunity"/>
     </application>
 
 </manifest>
