@@ -4,16 +4,24 @@
         "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/drawable/community.png"
     },
     {
-        "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/layout_community_my.xml.flat",
-        "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/layout/community_my.xml"
-    },
-    {
         "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
+        "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/layout_community_my.xml.flat",
+        "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/layout/community_my.xml"
+    },
+    {
         "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_post_bg.xml.flat",
         "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/drawable/post_bg.xml"
+    },
+    {
+        "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/layout_login.xml.flat",
+        "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/layout/login.xml"
+    },
+    {
+        "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_signup.png.flat",
+        "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/drawable/signup.png"
     },
     {
         "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_plus.png.flat",
@@ -38,6 +46,10 @@
     {
         "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_community_button.png.flat",
         "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/drawable/community_button.png"
+    },
+    {
+        "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_login_name.png.flat",
+        "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/drawable/login_name.png"
     },
     {
         "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_user_button.png.flat",
@@ -72,8 +84,16 @@
         "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/drawable/button_bg.xml"
     },
     {
+        "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/layout_signup.xml.flat",
+        "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/layout/signup.xml"
+    },
+    {
         "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_login_logo.png.flat",
+        "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/drawable/login_logo.png"
     },
     {
         "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/layout_post.xml.flat",
@@ -94,6 +114,10 @@
     {
         "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat",
         "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_radius.xml.flat",
+        "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/drawable/radius.xml"
     },
     {
         "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",

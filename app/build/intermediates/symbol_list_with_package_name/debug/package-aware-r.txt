@@ -1796,6 +1796,8 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable login_logo
+drawable login_name
 drawable logo
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
@@ -1832,8 +1834,10 @@ drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable plus
 drawable post_bg
+drawable radius
 drawable reading_glasses
 drawable scheduler_button
+drawable signup
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1937,6 +1941,9 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id btn_findLogin
+id btn_signup
+id button
 id buttonPanel
 id cache_measures
 id cancel_button
@@ -1965,6 +1972,7 @@ id collapseActionView
 id community_button
 id confirm_button
 id constraint
+id constraintLayout
 id container
 id content
 id contentPanel
@@ -2016,6 +2024,15 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id et_address
+id et_id
+id et_nickname
+id et_phone
+id et_pw
+id et_signid
+id et_signname
+id et_signpw
+id et_univ
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -2059,6 +2076,9 @@ id imageView3
 id imageView4
 id imageView5
 id imageView6
+id imageView7
+id imageView8
+id img_loginLogo
 id immediateStop
 id included
 id info
@@ -2082,6 +2102,7 @@ id line3
 id linear
 id listMode
 id list_item
+id login_imgName
 id major_community
 id masked
 id match_constraint
@@ -2309,6 +2330,16 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_id
+id tv_line
+id tv_pw
+id tv_signaddress
+id tv_signid
+id tv_signname
+id tv_signnickname
+id tv_signphone
+id tv_signpw
+id tv_signschool
 id unchecked
 id uniform
 id unlabeled
@@ -2419,6 +2450,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout login
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2472,6 +2504,7 @@ layout post
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout signup
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius

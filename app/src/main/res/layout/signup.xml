@@ -6,6 +6,7 @@
   android:layout_height="match_parent">
 
   <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -35,7 +36,13 @@
 
   <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
     <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
       android:layout_height="match_parent">
@@ -55,8 +62,8 @@
         android:layout_width="279dp"
         android:layout_height="35dp"
         android:background="@drawable/radius"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/et_signname"
+        app:layout_constraintStart_toStartOf="@+id/et_signname"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="407dp" />
 
@@ -89,8 +96,8 @@
         android:layout_width="279dp"
         android:layout_height="35dp"
         android:background="@drawable/radius"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/et_phone"
+        app:layout_constraintStart_toStartOf="@+id/et_phone"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="463dp" />
 
@@ -99,8 +106,8 @@
         android:layout_width="279dp"
         android:layout_height="35dp"
         android:background="@drawable/radius"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/et_address"
+        app:layout_constraintStart_toStartOf="@+id/et_address"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="517dp" />
 
@@ -133,10 +140,10 @@
         android:layout_width="279dp"
         android:layout_height="35dp"
         android:background="@drawable/radius"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="289dp" />
+        app:layout_constraintEnd_toEndOf="@+id/et_signpw"
+        app:layout_constraintStart_toStartOf="@+id/et_signpw"
+        app:layout_constraintTop_toBottomOf="@+id/et_signpw"
+        tools:ignore="MissingConstraints" />
 
       <TextView
         android:id="@+id/tv_signname"
@@ -155,8 +162,8 @@
         android:layout_width="279dp"
         android:layout_height="35dp"
         android:background="@drawable/radius"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/et_univ"
+        app:layout_constraintStart_toStartOf="@+id/et_univ"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteY="579dp" />
 
@@ -165,10 +172,10 @@
         android:layout_width="279dp"
         android:layout_height="35dp"
         android:background="@drawable/radius"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="349dp" />
+        app:layout_constraintEnd_toEndOf="@+id/et_signid"
+        app:layout_constraintStart_toStartOf="@+id/et_signid"
+        app:layout_constraintTop_toBottomOf="@+id/et_signid"
+        tools:ignore="MissingConstraints" />
 
       <TextView
         android:id="@+id/tv_signnickname"
@@ -195,12 +202,10 @@
         tools:ignore="MissingConstraints" />
 
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
   </ScrollView>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

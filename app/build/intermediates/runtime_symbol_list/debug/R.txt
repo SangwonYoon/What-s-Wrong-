@@ -1795,6 +1795,8 @@ int drawable ic_mtrl_checked_circle 0x7f07006d
 int drawable ic_mtrl_chip_checked_black 0x7f07006e
 int drawable ic_mtrl_chip_checked_circle 0x7f07006f
 int drawable ic_mtrl_chip_close_circle 0x7f070070
+int drawable login_logo 0x7f07009b
+int drawable login_name 0x7f07009c
 int drawable logo 0x7f070071
 int drawable material_cursor_drawable 0x7f070072
 int drawable material_ic_calendar_black_24dp 0x7f070073
@@ -1831,8 +1833,10 @@ int drawable notification_tile_bg 0x7f070091
 int drawable notify_panel_notification_icon_bg 0x7f070092
 int drawable plus 0x7f070093
 int drawable post_bg 0x7f070094
+int drawable radius 0x7f07009d
 int drawable reading_glasses 0x7f070095
 int drawable scheduler_button 0x7f070096
+int drawable signup 0x7f07009e
 int drawable test_custom_background 0x7f070097
 int drawable tooltip_frame_dark 0x7f070098
 int drawable tooltip_frame_light 0x7f070099
@@ -1936,6 +1940,9 @@ int id bounce 0x7f08005f
 int id bounceBoth 0x7f080060
 int id bounceEnd 0x7f080061
 int id bounceStart 0x7f080062
+int id btn_findLogin 0x7f0801ee
+int id btn_signup 0x7f0801ef
+int id button 0x7f0801f0
 int id buttonPanel 0x7f080063
 int id cache_measures 0x7f080064
 int id cancel_button 0x7f080065
@@ -1964,6 +1971,7 @@ int id collapseActionView 0x7f08007b
 int id community_button 0x7f08007c
 int id confirm_button 0x7f08007d
 int id constraint 0x7f08007e
+int id constraintLayout 0x7f080208
 int id container 0x7f08007f
 int id content 0x7f080080
 int id contentPanel 0x7f080081
@@ -2015,6 +2023,15 @@ int id end 0x7f0800ae
 int id endToStart 0x7f0800af
 int id enterAlways 0x7f0800b0
 int id enterAlwaysCollapsed 0x7f0800b1
+int id et_address 0x7f0801f1
+int id et_id 0x7f0801f2
+int id et_nickname 0x7f0801f3
+int id et_phone 0x7f0801f4
+int id et_pw 0x7f0801f5
+int id et_signid 0x7f0801f6
+int id et_signname 0x7f0801f7
+int id et_signpw 0x7f0801f8
+int id et_univ 0x7f0801f9
 int id exitUntilCollapsed 0x7f0800b2
 int id expand_activities_button 0x7f0800b3
 int id expanded_menu 0x7f0800b4
@@ -2058,6 +2075,9 @@ int id imageView3 0x7f0800d9
 int id imageView4 0x7f0800da
 int id imageView5 0x7f0800db
 int id imageView6 0x7f0800dc
+int id imageView7 0x7f0801fa
+int id imageView8 0x7f0801fb
+int id img_loginLogo 0x7f0801fc
 int id immediateStop 0x7f0800dd
 int id included 0x7f0800de
 int id info 0x7f0800df
@@ -2081,6 +2101,7 @@ int id line3 0x7f0800f0
 int id linear 0x7f0800f1
 int id listMode 0x7f0800f2
 int id list_item 0x7f0800f3
+int id login_imgName 0x7f0801fd
 int id major_community 0x7f0800f4
 int id masked 0x7f0800f5
 int id match_constraint 0x7f0800f6
@@ -2308,6 +2329,16 @@ int id transition_position 0x7f0801d3
 int id transition_scene_layoutid_cache 0x7f0801d4
 int id transition_transform 0x7f0801d5
 int id triangle 0x7f0801d6
+int id tv_id 0x7f0801fe
+int id tv_line 0x7f0801ff
+int id tv_pw 0x7f080200
+int id tv_signaddress 0x7f080201
+int id tv_signid 0x7f080202
+int id tv_signname 0x7f080203
+int id tv_signnickname 0x7f080204
+int id tv_signphone 0x7f080205
+int id tv_signpw 0x7f080206
+int id tv_signschool 0x7f080207
 int id unchecked 0x7f0801d7
 int id uniform 0x7f0801d8
 int id unlabeled 0x7f0801d9
@@ -2418,6 +2449,7 @@ int layout design_navigation_menu 0x7f0b002c
 int layout design_navigation_menu_item 0x7f0b002d
 int layout design_text_input_end_icon 0x7f0b002e
 int layout design_text_input_start_icon 0x7f0b002f
+int layout login 0x7f0b0075
 int layout material_chip_input_combo 0x7f0b0030
 int layout material_clock_display 0x7f0b0031
 int layout material_clock_display_divider 0x7f0b0032
@@ -2471,6 +2503,7 @@ int layout post 0x7f0b0061
 int layout select_dialog_item_material 0x7f0b0062
 int layout select_dialog_multichoice_material 0x7f0b0063
 int layout select_dialog_singlechoice_material 0x7f0b0064
+int layout signup 0x7f0b0076
 int layout support_simple_spinner_dropdown_item 0x7f0b0065
 int layout test_action_chip 0x7f0b0066
 int layout test_chip_zero_corner_radius 0x7f0b0067
