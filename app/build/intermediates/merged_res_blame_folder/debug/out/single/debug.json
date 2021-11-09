@@ -1,118 +1,146 @@
 [
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/layout_community_class.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/layout/community_class.xml"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\layout_community_class.xml.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\layout\\community_class.xml"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_post_bg.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/drawable/post_bg.xml"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable_reading_glasses.png.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\reading_glasses.png"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/layout_community_main.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/layout/community_main.xml"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable_community_button.png.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\community_button.png"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_community.png.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/drawable/community.png"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable_button_bg.xml.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\button_bg.xml"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable_logo.png.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\logo.png"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_shadow.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/drawable/shadow.xml"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable_community.png.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\community.png"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/color_colortime.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/color/colortime.xml"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_logo.png.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/drawable/logo.png"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable_user_button.png.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\user_button.png"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\layout_post.xml.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\layout\\post.xml"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/layout_post.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/layout/post.xml"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable_bottom_button_bg.xml.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\bottom_button_bg.xml"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_reading_glasses.png.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/drawable/reading_glasses.png"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/layout_community_by_class.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/layout/community_by_class.xml"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable_plus.png.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\plus.png"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_community_button.png.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/drawable/community_button.png"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\layout_community_my.xml.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\layout\\community_my.xml"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_scheduler_button.png.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/drawable/scheduler_button.png"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable_scheduler_button.png.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\scheduler_button.png"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_user_button.png.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/drawable/user_button.png"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_bottom_button_bg.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/drawable/bottom_button_bg.xml"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\layout_community_main.xml.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\layout\\community_main.xml"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\drawable_post_bg.xml.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\drawable\\post_bg.xml"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/font_passiononeregular.ttf.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/font/passiononeregular.ttf"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_button_bg.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/drawable/button_bg.xml"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_plus.png.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/drawable/plus.png"
     },
     {
-        "merged": "C:\\Programming\\app_programming\\WhatsWrong\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Programming\\app_programming\\WhatsWrong\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/layout_community_my.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/layout/community_my.xml"
+    },
+    {
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/layout_activity_main_cal.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/layout/activity_main_cal.xml"
+    },
+    {
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/layout_activity_main.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/layout_scheduler_item.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/layout/scheduler_item.xml"
+    },
+    {
+        "merged": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/build/intermediates/merged_res/debug/drawable_border.xml.flat",
+        "source": "/Users/shin/AndroidStudioProjects/WhatsWrong/app/src/main/res/drawable/border.xml"
     }
 ]

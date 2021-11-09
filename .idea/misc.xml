@@ -12,6 +12,18 @@
         <entry key="..\:/Programming/app_programming/WhatsWrong/app/src/main/res/layout/community_main.xml" value="0.33" />
         <entry key="..\:/Programming/app_programming/WhatsWrong/app/src/main/res/layout/community_my.xml" value="0.36614583333333334" />
         <entry key="..\:/Programming/app_programming/WhatsWrong/app/src/main/res/layout/post.xml" value="0.36614583333333334" />
+        <entry key="app/src/main/res/drawable/border.xml" value="0.38177083333333334" />
+        <entry key="app/src/main/res/drawable/bottom_button_bg.xml" value="0.21666666666666667" />
+        <entry key="app/src/main/res/drawable/button_bg.xml" value="0.21666666666666667" />
+        <entry key="app/src/main/res/drawable/shadow.xml" value="0.38177083333333334" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
+        <entry key="app/src/main/res/layout/activity_main_cal.xml" value="0.4199021759529981" />
+        <entry key="app/src/main/res/layout/community_by_class.xml" value="0.41959559215535297" />
+        <entry key="app/src/main/res/layout/community_class.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/community_main.xml" value="0.6631339481265006" />
+        <entry key="app/src/main/res/layout/community_my.xml" value="0.18802083333333333" />
+        <entry key="app/src/main/res/layout/post.xml" value="0.3776464955967579" />
+        <entry key="app/src/main/res/layout/scheduler_item.xml" value="0.365625" />
       </map>
     </option>
   </component>
