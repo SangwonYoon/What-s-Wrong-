@@ -12,6 +12,14 @@
         <entry key="..\:/Programming/app_programming/WhatsWrong/app/src/main/res/layout/community_main.xml" value="0.33" />
         <entry key="..\:/Programming/app_programming/WhatsWrong/app/src/main/res/layout/community_my.xml" value="0.36614583333333334" />
         <entry key="..\:/Programming/app_programming/WhatsWrong/app/src/main/res/layout/post.xml" value="0.36614583333333334" />
+        <entry key="app/src/main/res/drawable/radius.xml" value="0.25833333333333336" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.2421875" />
+        <entry key="app/src/main/res/layout/community_class.xml" value="0.2421875" />
+        <entry key="app/src/main/res/layout/community_main.xml" value="0.2421875" />
+        <entry key="app/src/main/res/layout/community_my.xml" value="0.2421875" />
+        <entry key="app/src/main/res/layout/login.xml" value="0.2977548935221455" />
+        <entry key="app/src/main/res/layout/post.xml" value="0.2421875" />
+        <entry key="app/src/main/res/layout/signup.xml" value="0.335" />
       </map>
     </option>
   </component>

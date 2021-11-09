@@ -19,7 +19,7 @@
         android:testOnly="true"
         android:theme="@style/Theme.WhatsWrong" >
         <activity
-            android:name="com.example.whatswrong.MainCommunity"
+            android:name="com.example.whatswrong.MainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.example.whatswrong.MyCommunity" />
-        <activity android:name="com.example.whatswrong.MainActivity" />
+        <activity android:name="com.example.whatswrong.MainCommunity" />
     </application>
 
 </manifest>
