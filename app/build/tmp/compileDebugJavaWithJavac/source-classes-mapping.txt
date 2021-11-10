@@ -1,2 +1,0 @@
-com/example/whatswrong/BuildConfig.java
- com.example.whatswrong.BuildConfig
