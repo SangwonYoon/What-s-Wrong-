@@ -2070,6 +2070,7 @@ int id ignore 0x7f0800d4
 int id ignoreRequest 0x7f0800d5
 int id image 0x7f0800d6
 int id imageView 0x7f0800d7
+int id imageView10 0x7f080209
 int id imageView2 0x7f0800d8
 int id imageView3 0x7f0800d9
 int id imageView4 0x7f0800da
@@ -2077,6 +2078,7 @@ int id imageView5 0x7f0800db
 int id imageView6 0x7f0800dc
 int id imageView7 0x7f0801fa
 int id imageView8 0x7f0801fb
+int id imageView9 0x7f08020a
 int id img_loginLogo 0x7f0801fc
 int id immediateStop 0x7f0800dd
 int id included 0x7f0800de
@@ -2193,6 +2195,7 @@ int id path 0x7f08014b
 int id pathRelative 0x7f08014c
 int id peekHeight 0x7f08014d
 int id percent 0x7f08014e
+int id personalInfo 0x7f08020b
 int id pin 0x7f08014f
 int id position 0x7f080150
 int id post 0x7f080151
@@ -2204,6 +2207,9 @@ int id progress_circular 0x7f080156
 int id progress_horizontal 0x7f080157
 int id q_a 0x7f080158
 int id radio 0x7f080159
+int id radio_Accept 0x7f08020c
+int id radio_Decline 0x7f08020d
+int id radio_groupAccept 0x7f08020e
 int id ratio 0x7f08015a
 int id rectangles 0x7f08015b
 int id reverseSawtooth 0x7f08015c
@@ -2243,6 +2249,7 @@ int id shortcut 0x7f08017d
 int id showCustom 0x7f08017e
 int id showHome 0x7f08017f
 int id showTitle 0x7f080180
+int id signupLinear 0x7f08020f
 int id sin 0x7f080181
 int id skipCollapsed 0x7f080182
 int id skipped 0x7f080183
@@ -2504,6 +2511,7 @@ int layout select_dialog_item_material 0x7f0b0062
 int layout select_dialog_multichoice_material 0x7f0b0063
 int layout select_dialog_singlechoice_material 0x7f0b0064
 int layout signup 0x7f0b0076
+int layout signup2 0x7f0b0077
 int layout support_simple_spinner_dropdown_item 0x7f0b0065
 int layout test_action_chip 0x7f0b0066
 int layout test_chip_zero_corner_radius 0x7f0b0067
@@ -2525,6 +2533,7 @@ int menu example_menu2 0x7f0c0001
 int mipmap ic_launcher 0x7f0d0000
 int mipmap ic_launcher_round 0x7f0d0001
 int plurals mtrl_badge_content_description 0x7f0e0000
+int string Info 0x7f0f006a
 int string abc_action_bar_home_description 0x7f0f0000
 int string abc_action_bar_up_description 0x7f0f0001
 int string abc_action_menu_overflow_description 0x7f0f0002
@@ -2628,6 +2637,8 @@ int string path_password_eye 0x7f0f0063
 int string path_password_eye_mask_strike_through 0x7f0f0064
 int string path_password_eye_mask_visible 0x7f0f0065
 int string path_password_strike_through 0x7f0f0066
+int string personInfoTitle 0x7f0f006b
+int string pwAtrr 0x7f0f006c
 int string q_a 0x7f0f0067
 int string search_menu_title 0x7f0f0068
 int string status_bar_notification_info_overflow 0x7f0f0069

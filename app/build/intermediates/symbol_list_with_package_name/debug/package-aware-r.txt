@@ -2071,6 +2071,7 @@ id ignore
 id ignoreRequest
 id image
 id imageView
+id imageView10
 id imageView2
 id imageView3
 id imageView4
@@ -2078,6 +2079,7 @@ id imageView5
 id imageView6
 id imageView7
 id imageView8
+id imageView9
 id img_loginLogo
 id immediateStop
 id included
@@ -2194,6 +2196,7 @@ id path
 id pathRelative
 id peekHeight
 id percent
+id personalInfo
 id pin
 id position
 id post
@@ -2205,6 +2208,9 @@ id progress_circular
 id progress_horizontal
 id q_a
 id radio
+id radio_Accept
+id radio_Decline
+id radio_groupAccept
 id ratio
 id rectangles
 id reverseSawtooth
@@ -2244,6 +2250,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id signupLinear
 id sin
 id skipCollapsed
 id skipped
@@ -2505,6 +2512,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout signup
+layout signup2
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
@@ -2526,6 +2534,7 @@ menu example_menu2
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+string Info
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -2629,6 +2638,8 @@ string path_password_eye
 string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
+string personInfoTitle
+string pwAtrr
 string q_a
 string search_menu_title
 string status_bar_notification_info_overflow

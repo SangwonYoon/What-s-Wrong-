@@ -172,10 +172,9 @@
         android:layout_width="279dp"
         android:layout_height="35dp"
         android:background="@drawable/radius"
-        app:layout_constraintEnd_toEndOf="@+id/et_signid"
-        app:layout_constraintStart_toStartOf="@+id/et_signid"
         app:layout_constraintTop_toBottomOf="@+id/et_signid"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="66dp" />
 
       <TextView
         android:id="@+id/tv_signnickname"

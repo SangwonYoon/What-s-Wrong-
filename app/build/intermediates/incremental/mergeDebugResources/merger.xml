@@ -7702,7 +7702,31 @@
         
         <item name="android:statusBarColor" ns2:targetApi="l">?attr/colorPrimaryVariant</item>
         
-    </style></file><file path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/values/strings.xml" qualifiers=""><string name="app_name">WhatsWrong</string><string name="q_a"><![CDATA[Q&A]]></string></file><file name="ic_launcher" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" qualifiers="xhdpi-v4" type="mipmap"/><file name="ic_launcher_round" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" qualifiers="xhdpi-v4" type="mipmap"/><file name="ic_launcher" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" qualifiers="anydpi-v26" type="mipmap"/><file name="ic_launcher_round" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" qualifiers="anydpi-v26" type="mipmap"/><file name="login_logo" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/drawable/login_logo.png" qualifiers="" type="drawable"/><file name="login_name" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/drawable/login_name.png" qualifiers="" type="drawable"/><file name="radius" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/drawable/radius.xml" qualifiers="" type="drawable"/><file name="signup" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/drawable/signup.png" qualifiers="" type="drawable"/><file name="login" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/layout/login.xml" qualifiers="" type="layout"/><file name="signup" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/layout/signup.xml" qualifiers="" type="layout"/></source><source path="/Users/hojun/Documents/GitHub/WhatsWrong/app/build/generated/res/rs/debug"/><source path="/Users/hojun/Documents/GitHub/WhatsWrong/app/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/debug/res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">
+    </style></file><file path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/values/strings.xml" qualifiers=""><string name="app_name">WhatsWrong</string><string name="q_a"><![CDATA[Q&A]]></string><string name="pwAtrr">숫자,영문을 포함하여 6자 이상(특수키 제외)</string><string name="personInfoTitle">개인정보 이용 약관</string><string name="Info">모프컴퍼니(주)는 본인인증서비스 제공을 위해 본인으로부터 아래의 개인정보를 입력받으며, 입력받은 개인정보의 이용 및 활용을 위해 다음의 사항에 대하여 본인으로부터 동의를 받습니다.
+
+1. 입력받는 정보
+가. 정보항목
+학교, 성명, 주소
+나. 입력방법
+회원가입 페이지에서 이용자가 직접 입력
+2. 개인정보의 이용목적과 수집 및 제공 정보
+가. 이용 목적
+서비스(회원가입, ID/PW찾기 등)이용을 위한 본인인증
+부정 이용 방지
+기타 법률에서 정한 목적
+나. 수집 및 제공하는 정보
+학교, 성명, 주소
+3. 개인정보의 보유 및 이용기간
+이용자의 개인정보는 원칙적으로 개인정보의 수집 및 이용목적이 달성되면 지체없이 파기합니다. 단, 다음의 정보에 대해서는 아래의 이유로 명기한 기간 동안 보유합니다.
+
+가. 회사 내부 방침에 의한 정보보유 사유
+본인확인 발생 및 차단기록
+보유 이유: 부정 이용 방지 및 민원 처리
+보유 기간: 5년
+나. 관계법령에 의한 정보보유 사유
+이용자 불만 또는 분쟁 처리에 관한 기록
+보유 이유: 전자상거래 등에서의 소비자보호에 관한 법률
+보유 기간: 3년</string></file><file name="ic_launcher" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" qualifiers="xhdpi-v4" type="mipmap"/><file name="ic_launcher_round" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" qualifiers="xhdpi-v4" type="mipmap"/><file name="ic_launcher" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" qualifiers="anydpi-v26" type="mipmap"/><file name="ic_launcher_round" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" qualifiers="anydpi-v26" type="mipmap"/><file name="login_logo" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/drawable/login_logo.png" qualifiers="" type="drawable"/><file name="login_name" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/drawable/login_name.png" qualifiers="" type="drawable"/><file name="radius" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/drawable/radius.xml" qualifiers="" type="drawable"/><file name="signup" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/drawable/signup.png" qualifiers="" type="drawable"/><file name="login" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/layout/login.xml" qualifiers="" type="layout"/><file name="signup" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/layout/signup.xml" qualifiers="" type="layout"/><file name="signup2" path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/layout/signup2.xml" qualifiers="" type="layout"/></source><source path="/Users/hojun/Documents/GitHub/WhatsWrong/app/build/generated/res/rs/debug"/><source path="/Users/hojun/Documents/GitHub/WhatsWrong/app/build/generated/res/resValues/debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/debug/res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="/Users/hojun/Documents/GitHub/WhatsWrong/app/src/debug/res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">
         <attr name="android:layout"/>
         <attr format="reference" name="buttonPanelSideLayout"/>
         <attr format="reference" name="listLayout"/>

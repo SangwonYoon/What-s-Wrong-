@@ -32,12 +32,12 @@
         "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
-    },
-    {
         "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
         "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/layout_activity_main.xml.flat",
@@ -70,6 +70,10 @@
     {
         "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/layout_community_class.xml.flat",
         "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/layout/community_class.xml"
+    },
+    {
+        "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/layout_signup2.xml.flat",
+        "source": "/Users/hojun/Documents/GitHub/WhatsWrong/app/src/main/res/layout/signup2.xml"
     },
     {
         "merged": "/Users/hojun/Documents/GitHub/WhatsWrong/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.webp.flat",
