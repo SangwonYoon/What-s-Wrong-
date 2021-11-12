@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "633422809143",
+    "project_id": "whatswrong-4b703",
+    "storage_bucket": "whatswrong-4b703.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:633422809143:android:8251bf64895d6654af17b2",
+        "android_client_info": {
+          "package_name": "com.example.whatswrong"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "633422809143-hfq7d428ks5jstoa08u2bla8bep7aobg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKjFKIgPtALKWeOYitXr6fmXEvs-8XRrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "633422809143-hfq7d428ks5jstoa08u2bla8bep7aobg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

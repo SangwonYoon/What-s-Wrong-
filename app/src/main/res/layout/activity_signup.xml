@@ -2,7 +2,8 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   android:layout_width="match_parent"
-  android:layout_height="match_parent">
+  android:layout_height="match_parent"
+  >
 
   <LinearLayout
     android:id="@+id/signupLinear"
@@ -30,7 +31,7 @@
       android:id="@+id/tv_signid"
       android:layout_width="279dp"
       android:layout_height="wrap_content"
-      android:text="ID"
+      android:text="E-mail"
       android:textColor="#000000"
       android:textSize="16sp"/>
 
@@ -41,14 +42,16 @@
       android:padding="0dp">
 
       <EditText
-        android:id="@+id/et_signid"
+        android:id="@+id/et_signEmail"
         android:layout_height="35dp"
         android:layout_marginRight="10dp"
+        android:inputType="textEmailAddress"
         android:background="@drawable/radius"
         android:layout_weight="7"
         android:layout_width="0dp"/>
 
       <Button
+        android:id="@+id/btn_checkId"
         android:layout_weight="3"
         android:layout_height="wrap_content"
         android:text="중복 확인"
@@ -56,6 +59,7 @@
         android:background="@drawable/radius"/>
     </LinearLayout>
     <TextView
+      android:id="@+id/tv_idMessage"
       android:layout_width="279dp"
       android:layout_height="match_parent"
       android:gravity="right"
@@ -86,13 +90,14 @@
 
     </LinearLayout>
 
-
     <EditText
-      android:id="@+id/et_signpw"
+      android:id="@+id/et_signPw"
+      android:inputType="textPassword"
       android:layout_width="279dp"
       android:layout_height="35dp"
       android:background="@drawable/radius"/>
     <TextView
+      android:id="@+id/tv_pwMessage"
       android:layout_width="279dp"
       android:layout_height="match_parent"
       android:textColor="#FF0000"
@@ -113,7 +118,7 @@
       android:textSize="16sp" />
 
     <EditText
-      android:id="@+id/et_signname"
+      android:id="@+id/et_signName"
       android:layout_width="279dp"
       android:layout_height="35dp"
       android:background="@drawable/radius"
@@ -129,7 +134,7 @@
       android:textSize="16sp" />
 
     <EditText
-      android:id="@+id/et_phone"
+      android:id="@+id/et_signPhone"
       android:layout_width="279dp"
       android:layout_height="35dp"
       android:layout_marginBottom="15dp"
@@ -146,7 +151,7 @@
       />
 
     <EditText
-      android:id="@+id/et_address"
+      android:id="@+id/et_signAddress"
       android:layout_width="279dp"
       android:layout_height="35dp"
       android:background="@drawable/radius"
@@ -162,14 +167,14 @@
       android:textSize="16sp" />
 
     <EditText
-      android:id="@+id/et_univ"
+      android:id="@+id/et_SignUniv"
       android:layout_width="279dp"
       android:layout_height="35dp"
       android:background="@drawable/radius"
       android:layout_marginBottom="15dp"/>
 
     <TextView
-      android:id="@+id/tv_signnickname"
+      android:id="@+id/tv_nickname"
       android:layout_width="279dp"
       android:layout_height="wrap_content"
       android:layout_marginBottom="3dp"
@@ -178,11 +183,12 @@
       android:textSize="16sp" />
 
     <EditText
-      android:id="@+id/et_nickname"
+      android:id="@+id/et_signNickname"
       android:layout_width="279dp"
       android:layout_height="35dp"
       android:background="@drawable/radius"/>
     <TextView
+      android:id="@+id/tv_nicknameMessage"
       android:layout_width="279dp"
       android:layout_height="match_parent"
       android:textColor="#FF0000"
@@ -238,6 +244,7 @@
     </RadioGroup>
 
     <Button
+      android:id="@+id/btn_signup"
       android:layout_width="279dp"
       android:layout_height="match_parent"
       android:background="@drawable/radius"
