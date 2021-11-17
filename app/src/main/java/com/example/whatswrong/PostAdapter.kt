@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class PostAdapter (val mContext : Context, val PostList : ArrayList<Posts>) : RecyclerView.Adapter<PostAdapter.CustomViewHolder>() {
+class PostAdapter (val mContext : Context, val PostList : ArrayList<Posts>, val className : String) : RecyclerView.Adapter<PostAdapter.CustomViewHolder>() {
 
     class CustomViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         val postTitle = itemView.findViewById<TextView>(R.id.post_title)
@@ -25,6 +25,7 @@ class PostAdapter (val mContext : Context, val PostList : ArrayList<Posts>) : Re
                 val post : Posts = PostList.get(curPos)
                 val intent = Intent(mContext,PostActivity::class.java)
 
+                intent.putExtra("과목명", className)
                 intent.putExtra("title", post.title)
                 intent.putExtra("content", post.content)
                 intent.putExtra("user", post.user)
