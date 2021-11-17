@@ -25,12 +25,13 @@
             android:name=".MainCalActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ClassCommunity"
             android:exported="true">
 
         </activity>
         <activity android:name=".MyCommunity" />
         <activity android:name=".MainCommunity" />
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>
