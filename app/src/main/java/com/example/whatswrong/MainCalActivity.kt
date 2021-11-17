@@ -2,6 +2,8 @@ package com.example.whatswrong
 
 import android.annotation.SuppressLint
 import android.content.DialogInterface
+import android.graphics.Color
+import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
@@ -10,13 +12,24 @@ import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
+import androidx.core.graphics.toColor
+import androidx.recyclerview.widget.GridLayoutManager
+import kotlinx.android.synthetic.main.activity_main_cal.*
+import java.util.concurrent.ScheduledExecutorService
 
 class MainCalActivity : AppCompatActivity() {
     val days = arrayOf("", "Mon", "Tue", "Wed", "Thu", "Fri")
     val times = Array(11) { i -> ((i + 9).toString()) }
     var calendarData = mutableMapOf(
         0 to SchdulerData(0, "응용통계학","김준호"),
-        15 to SchdulerData(15, "인공지능","이재구")
+        15 to SchdulerData(15, "인공지능","이재구"),
+        20 to SchdulerData(20, "컴퓨터구조","임은진"),
+        21 to SchdulerData(21, "이산수학","우종우"),
+        26 to SchdulerData(26, "객지프","김영만"),
+        4 to SchdulerData(4, "응용통계학","김준호"),
+        8 to SchdulerData(8, "객지프","김영만"),
+        33 to SchdulerData(33, "모바일프로그래밍","이창우"),
+        40 to SchdulerData(40, "인공지능","이재구"),
     )
     var cells = mutableMapOf<Int, View>()
     lateinit var spinner: Spinner
@@ -24,6 +37,11 @@ class MainCalActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main_cal)
+
+        var userSchedulerData = mutableListOf<SchdulerData>()
+        for(i:Int in 0 until calendarData.size){
+             userSchedulerData[calendarData[i]?.idx!!]= calendarData[i]!!
+        }
 
         val grid: GridLayout = findViewById(R.id.recyclerGrid)
         grid.columnCount = 6
@@ -50,6 +68,10 @@ class MainCalActivity : AppCompatActivity() {
             )
             layout.addView(text)
         }
+        val BackgroundColors = arrayOf(Color.rgb(223, 250, 180),
+            Color.rgb(234, 249, 209),
+            Color.rgb(213, 255, 146),
+            Color.rgb(207, 225, 177))
         for (i: Int in 1 until grid.rowCount) {
             for (j: Int in 1 until grid.columnCount) {
                 val layout = createCell(175, 85, j, i, grid)
@@ -58,8 +80,10 @@ class MainCalActivity : AppCompatActivity() {
                 cells[idx] = cell
                 if (calendarData.containsKey(idx)){
                     val data = calendarData[idx]
+                    cell.setBackgroundColor(BackgroundColors[i%4])
                     cell.findViewById<TextView>(R.id.scheduler_item_subject).text= data?.subject
                     cell.findViewById<TextView>(R.id.scheduler_item_professor).text=data?.professor
+
                     cell.setOnClickListener{
                         val view = layoutInflater.inflate(R.layout.dialog_scheculer,null)
                         view.findViewById<EditText>(R.id.dialog_scheduler_subject)
@@ -89,6 +113,7 @@ class MainCalActivity : AppCompatActivity() {
                             .setPositiveButton("삭제",
                                 DialogInterface.OnClickListener { dialog, id ->
                                     calendarData.remove(idx)
+                                    cell.setBackgroundColor(Color.WHITE)
                                     refreshCell(calendarData)
                                 })
                             .setNegativeButton("취소",
@@ -121,8 +146,6 @@ class MainCalActivity : AppCompatActivity() {
                             .create().show()
                     }
                 }
-
-
             }
         }
         val grid1: GridLayout = findViewById(R.id.gridSubject)
