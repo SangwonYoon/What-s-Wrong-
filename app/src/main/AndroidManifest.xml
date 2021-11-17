@@ -32,6 +32,7 @@
         <activity android:name=".MyCommunity" />
         <activity android:name=".MainCommunity" />
         <activity android:name=".MainActivity"/>
+        <activity android:name=".PostActivity"/>
     </application>
 
 </manifest>

@@ -3,10 +3,7 @@ package com.example.whatswrong
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -26,7 +23,7 @@ class ClassCommunity  : AppCompatActivity(){
         rv_post.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false)
         rv_post.setHasFixedSize(true)
 
-        val mAdapter = PostAdapter(postList)
+        val mAdapter = PostAdapter(this, postList)
         rv_post.adapter = mAdapter
 
         // 과목명 정보 받아오기 & 데이터 베이스에서 post 데이터 가져와서 postList에 넣기
@@ -49,15 +46,9 @@ class ClassCommunity  : AppCompatActivity(){
             }
 
             override fun onCancelled(p0: DatabaseError) {
-
+                Toast.makeText(this@ClassCommunity,"인터넷 연결이 불안정합니다.",Toast.LENGTH_SHORT).show()
             }
         })
-
-        //val postList = arrayListOf(
-            //Posts("개인 과제 다 하신 분?", "hello", "익명", "12:00"),
-            //Posts("안녕하세요!", "hi!!!", "익명", "13:00"),
-            //Posts("반갑습니다~~", "처음뵙겠습니다!", "익명", "14:00")
-        //)
 
         // 새 글 쓰기 버튼 onClick 이벤트 처리
         val postButton : ImageView = findViewById(R.id.post_button)
@@ -75,5 +66,7 @@ class ClassCommunity  : AppCompatActivity(){
 
             myRef.push().setValue(post)
         }
+
+        // post 눌렀을 때 게시글로 이동
     }
 }
