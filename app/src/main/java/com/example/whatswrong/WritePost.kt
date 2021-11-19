@@ -39,6 +39,7 @@ class WritePost  : AppCompatActivity(){
             }
 
             val now = System.currentTimeMillis();
+            Log.d("test", now.toString())
             val date = Date(now)
             val dateFormat = SimpleDateFormat("MM-dd hh:mm")
             val timezone = TimeZone.getTimeZone("Asia/Seoul")
@@ -47,9 +48,9 @@ class WritePost  : AppCompatActivity(){
 
             Log.d("test", postTime)
 
-            val post = Posts(postTitle, postContent, postUser, postTime)
+            val post = Posts(postTitle, postContent, postUser, postTime,  now.toString())
 
-            myRef.push().setValue(post)
+            myRef.child(now.toString()).setValue(post)
 
             finish()
         }

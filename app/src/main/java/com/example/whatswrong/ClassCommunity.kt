@@ -42,7 +42,7 @@ class ClassCommunity  : AppCompatActivity(){
                 postList.clear()
                 for(data in p0.children) {
                     val temp_post = data.getValue(Posts::class.java) // Posts class에 기본 생성자가 있어야 함
-                    val post = Posts(temp_post?.title.toString(),temp_post?.content.toString(),temp_post?.user.toString(),temp_post?.time.toString())
+                    val post = Posts(temp_post?.title.toString(),temp_post?.content.toString(),temp_post?.user.toString(),temp_post?.time.toString(),temp_post?.key.toString())
                     postList.add(post)
                 }
                 mAdapter.notifyDataSetChanged()
@@ -61,12 +61,6 @@ class ClassCommunity  : AppCompatActivity(){
             val intent = Intent(this@ClassCommunity, WritePost::class.java)
             intent.putExtra("과목명", className)
             startActivity(intent)
-
-            // intent에서 넘어온 데이터에서 title, content, user, time을 추출
-
-            //val post = Posts("안녕하세요!!", "hi", "익명","12:30")
-
-            //myRef.push().setValue(post)
         }
     }
 }
