@@ -40,12 +40,12 @@ class LoginActivity : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                 if(task.isSuccessful){
                     val intent_main_cal = Intent(this, MainCalActivity::class.java)
-                    Toast.makeText(this, "Login success", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "환영합니다.", Toast.LENGTH_SHORT).show()
                     startActivity(intent_main_cal)
                     finish()
                     
                 }else {
-                    Toast.makeText(this, "Retry Login and Check ID,PW..", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "아이디 또는 비밀번호를 확인해주세요.", Toast.LENGTH_SHORT).show()
                 }
             }
 
