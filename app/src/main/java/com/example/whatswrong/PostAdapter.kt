@@ -2,10 +2,12 @@ package com.example.whatswrong
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class PostAdapter (val mContext : Context, val PostList : ArrayList<Posts>, val className : String) : RecyclerView.Adapter<PostAdapter.CustomViewHolder>() {
@@ -30,6 +32,9 @@ class PostAdapter (val mContext : Context, val PostList : ArrayList<Posts>, val 
                 intent.putExtra("content", post.content)
                 intent.putExtra("user", post.user)
                 intent.putExtra("time", post.time)
+                intent.putExtra("key", post.key)
+
+                Log.d("test", post.key)
 
                 mContext.startActivity(intent)
             }
