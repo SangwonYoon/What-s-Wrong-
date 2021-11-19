@@ -17,7 +17,7 @@ import java.util.*
 
 class PostActivity  : AppCompatActivity(){
 
-    private val commentList = arrayListOf<Comments>(Comments("익명","와!","12:00"))
+    private val commentList = arrayListOf<Comments>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
