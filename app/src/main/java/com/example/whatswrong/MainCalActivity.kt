@@ -3,21 +3,22 @@ package com.example.whatswrong
 import android.annotation.SuppressLint
 import android.content.DialogInterface
 import android.graphics.Color
-import android.graphics.drawable.Drawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
 import android.view.*
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.toColor
-import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.activity_main_cal.*
-import java.util.concurrent.ScheduledExecutorService
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class MainCalActivity : AppCompatActivity() {
+
+
     val days = arrayOf("", "Mon", "Tue", "Wed", "Thu", "Fri")
     val times = Array(11) { i -> ((i + 9).toString()) }
     var calendarData = mutableMapOf(
@@ -31,17 +32,35 @@ class MainCalActivity : AppCompatActivity() {
         33 to SchdulerData(33, "모바일프로그래밍","이창우"),
         40 to SchdulerData(40, "인공지능","이재구"),
     )
+    var subjectData = mutableListOf<SubjectData>(
+        SubjectData("컴구",1234),
+        SubjectData("이산수학",1234),
+        SubjectData("응통",1234),
+        SubjectData("생활속스포츠",1234),
+        SubjectData("모바일프로그래밍",1234),
+        SubjectData("모바일프로그래밍",1234),
+        SubjectData("컴구",1234),
+        SubjectData("이산수학",1234),
+        SubjectData("응통",1234),
+        SubjectData("생활속스포츠",1234),
+        SubjectData("모바일프로그래밍",1234),
+        SubjectData("모바일프로그래밍",1234),
+    )
     var cells = mutableMapOf<Int, View>()
-    lateinit var spinner: Spinner
     @SuppressLint("CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val database: FirebaseDatabase= FirebaseDatabase.getInstance()
+        val myref :DatabaseReference = database.getReference("Whaswrong/TimeTable")
+        myref.setValue("우종우")
         setContentView(R.layout.activity_main_cal)
 
-        var userSchedulerData = mutableListOf<SchdulerData>()
-        for(i:Int in 0 until calendarData.size){
-             userSchedulerData[calendarData[i]?.idx!!]= calendarData[i]!!
-        }
+
+//        var userSchedulerData = mutableListOf<SchdulerData>()
+//        for(i:Int in 0 until calendarData.size){
+//             userSchedulerData[calendarData[i]?.idx!!]= calendarData[i]!!
+//        }
 
         val grid: GridLayout = findViewById(R.id.recyclerGrid)
         grid.columnCount = 6
@@ -100,12 +119,14 @@ class MainCalActivity : AppCompatActivity() {
                                         view.findViewById<EditText>(R.id.dialog_scheduler_subject).text.toString()
                                     calendarData[idx]?.professor =
                                         view.findViewById<EditText>(R.id.dialog_scheduler_professor).text.toString()
+                                    cell.setBackgroundColor(BackgroundColors[j%4])
                                     refreshCell(calendarData)
                                 })
                             .setNegativeButton("취소", DialogInterface.OnClickListener { dialog, _ ->
                                 dialog.cancel()
                             })
                             .create().show()
+                        return@setOnClickListener
                     }
                     cell.setOnLongClickListener {
                         val builder = AlertDialog.Builder(this@MainCalActivity)
@@ -138,6 +159,7 @@ class MainCalActivity : AppCompatActivity() {
                                         view.findViewById<EditText>(R.id.dialog_scheduler_subject).text.toString(),
                                         view.findViewById<EditText>(R.id.dialog_scheduler_professor).text.toString(),
                                     )
+                                    layout.setBackgroundColor(BackgroundColors[i%4])
                                     refreshCell(calendarData)
                                 })
                             .setNegativeButton("취소", DialogInterface.OnClickListener { dialog, _ ->
@@ -156,6 +178,10 @@ class MainCalActivity : AppCompatActivity() {
                 val layout = createCell(550, 85, j, i, grid1)
                 val cell: View = layoutInflater.inflate(R.layout.community_by_class, layout)
                 val idx = ((i) * (grid.columnCount - 1)) + (j)
+                val data1 = subjectData[idx].subject
+                val data2 = subjectData[idx].code.toString()
+                cell.findViewById<Button>(R.id.btSubjectCode).text="${data1}/${data2}"
+                cell.findViewById<Button>(R.id.btSubjectCode).textSize=10f
                 cells[idx] = cell
 
             }
@@ -192,6 +218,7 @@ class MainCalActivity : AppCompatActivity() {
                 } else {
                     cell?.findViewById<TextView>(R.id.scheduler_item_subject)?.text = ""
                     cell?.findViewById<TextView>(R.id.scheduler_item_professor)?.text = ""
+
                 }
             }
         }
