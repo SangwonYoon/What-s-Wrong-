@@ -29,7 +29,7 @@
     android:id="@+id/linearLayout"
     android:layout_width="350dp"
     android:layout_height="wrap_content"
-    android:layout_marginTop="15dp"
+    android:layout_marginTop="30dp"
     android:background="@drawable/radius"
     android:orientation="horizontal"
     app:layout_constraintEnd_toEndOf="@+id/imageView8"
@@ -117,7 +117,7 @@
     android:id="@+id/btn_chgnickname"
     android:layout_width="350dp"
     android:layout_height="35dp"
-    android:layout_marginTop="30dp"
+    android:layout_marginTop="40dp"
     android:background="@drawable/radius"
     android:text="닉네임 변경"
     app:layout_constraintEnd_toEndOf="@+id/linearLayout"
@@ -125,28 +125,16 @@
     app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
   <Button
-    android:id="@+id/btn_mylog"
-    android:layout_width="350dp"
-    android:layout_height="35dp"
-    android:layout_marginTop="15dp"
-    android:background="@drawable/radius"
-    android:text="내 커뮤니티 활동"
-    app:layout_constraintEnd_toEndOf="@+id/btn_chgnickname"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="@+id/btn_chgnickname"
-    app:layout_constraintTop_toBottomOf="@+id/btn_chgnickname" />
-
-  <Button
     android:id="@+id/btn_myInfo"
     android:layout_width="350dp"
     android:layout_height="35dp"
     android:layout_marginTop="15dp"
     android:background="@drawable/radius"
-    android:text="개인정보 처리방침"
-    app:layout_constraintEnd_toEndOf="@+id/btn_mylog"
+    android:text="개인정보 취급 방침"
+    app:layout_constraintEnd_toEndOf="@+id/btn_chgnickname"
     app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="@+id/btn_mylog"
-    app:layout_constraintTop_toBottomOf="@+id/btn_mylog" />
+    app:layout_constraintStart_toStartOf="@+id/btn_chgnickname"
+    app:layout_constraintTop_toBottomOf="@+id/btn_chgnickname" />
 
   <Button
     android:id="@+id/btn_faq"
@@ -156,7 +144,6 @@
     android:background="@drawable/radius"
     android:text="FAQ"
     app:layout_constraintEnd_toEndOf="@+id/btn_myInfo"
-    app:layout_constraintHorizontal_bias="0.0"
     app:layout_constraintStart_toStartOf="@+id/btn_myInfo"
     app:layout_constraintTop_toBottomOf="@+id/btn_myInfo" />
 
@@ -188,7 +175,7 @@
     android:id="@+id/btn_logout"
     android:layout_width="170dp"
     android:layout_height="35dp"
-    android:layout_marginTop="20dp"
+    android:layout_marginTop="70dp"
     android:layout_marginEnd="5dp"
     android:background="@drawable/radius"
     android:text="로그아웃"
@@ -201,7 +188,7 @@
     android:layout_width="170dp"
     android:layout_height="35dp"
     android:layout_marginStart="5dp"
-    android:layout_marginTop="20dp"
+    android:layout_marginTop="70dp"
     android:background="@drawable/radius"
     android:text="회원탈퇴"
     app:layout_constraintEnd_toEndOf="@+id/btn_help"

@@ -139,28 +139,31 @@ class MyInfoActivity : AppCompatActivity() {
     }
 
     binding.btnChgnickname.setOnClickListener {
-      mDatabaseRef.child("UserAccount").child(myUid!!).get().addOnSuccessListener {
-        Log.e("DataSnap :: ",it.toString())
-        val temp = it.getValue(UserAccount::class.java)
-        temp!!.strNickname = "길똥이똥"
-        mDatabaseRef.child("UserAccount").child(myUid!!).setValue(temp)
-        try {
-          val intent = intent
-          finish() //현재 액티비티 종료 실시
-          overridePendingTransition(0, 0) //인텐트 애니메이션 없애기
-          startActivity(intent) //현재 액티비티 재실행 실시
-          overridePendingTransition(0, 0) //인텐트 애니메이션 없애기
-        } catch (e: Exception) {
-          e.printStackTrace()
+      val dialog = ChgNicNameDialog(this)
+      dialog.myDialog()
+      dialog.setOnClickedListener(object : ChgNicNameDialog.ButtonClickListener{
+        override fun onClicked(nickname: String) {
+          mDatabaseRef.child("UserAccount").child(myUid!!).get().addOnSuccessListener {
+            Log.e("DataSnap :: ",it.toString())
+            val temp = it.getValue(UserAccount::class.java)
+            temp!!.strNickname = nickname
+            mDatabaseRef.child("UserAccount").child(myUid!!).setValue(temp)
+            try {
+              val intent = intent
+              finish() //현재 액티비티 종료 실시
+              overridePendingTransition(0, 0) //인텐트 애니메이션 없애기
+              startActivity(intent) //현재 액티비티 재실행 실시
+              overridePendingTransition(0, 0) //인텐트 애니메이션 없애기
+            } catch (e: Exception) {
+              e.printStackTrace()
+            }
+          }.addOnFailureListener{
+            Log.e("firebase", "Error getting data", it)
+          }
         }
-      }.addOnFailureListener{
-        Log.e("firebase", "Error getting data", it)
-      }
 
+      })
     }
-
-
-
 
   }
 
