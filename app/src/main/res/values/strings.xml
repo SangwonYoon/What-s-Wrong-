@@ -28,4 +28,7 @@
 \t이용자 불만 또는 분쟁 처리에 관한 기록\n
 \t보유 이유: 전자상거래 등에서의 소비자보호에 관한 법률\n
 \t보유 기간: 3년</string>
+    <string name="io_title01">Keynote</string>
+    <string name="io_title02">Android: Open to the future</string>
+    <string name="io_title03">Wear OS by Google</string>
 </resources>
