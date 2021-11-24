@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WhatsWrong">
         <activity
-            android:name=".CalPlusDialog"
-            android:exported="true" />
-        <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>

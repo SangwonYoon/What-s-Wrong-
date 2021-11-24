@@ -23,6 +23,7 @@ import kotlinx.android.synthetic.main.activity_cal_plus_dialog.*
 import java.util.*
 import android.widget.DatePicker
 import androidx.core.view.get
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_cal_plus_dialog.view.*
 import kotlinx.android.synthetic.main.scheduler_item.*
 import kotlinx.android.synthetic.main.time_picker.*
@@ -61,6 +62,9 @@ class MainCalActivity : AppCompatActivity() {
         SubjectData("모바일프로그래밍",1234),
     )
     var cells = mutableMapOf<Int, View>()
+    //FireBase & RealTimeBase connect
+    private lateinit var mFirebaseAuth : FirebaseAuth // 파이어베이스 인증처리
+    private lateinit var mDatabaseRef : DatabaseReference
     @SuppressLint("CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -72,11 +76,14 @@ class MainCalActivity : AppCompatActivity() {
 //                            else return 1
 //                        }
 //                    }
-        val database: FirebaseDatabase= FirebaseDatabase.getInstance()
-        val myref :DatabaseReference = database.getReference("Whatswrong/TimeTable")
-        myref.setValue(subjectData)
         setContentView(R.layout.activity_main_cal)
 
+        mFirebaseAuth = FirebaseAuth.getInstance()
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Whatswrong")
+        val test1 = SubjectData("컴구",1234)
+        mDatabaseRef.child("Test1").setValue(test1)
+
+//        mDatabaseRef.setValue(SubjectData("컴구",1234))
 
         val grid: GridLayout = findViewById(R.id.recyclerGrid)
         grid.columnCount = 6
@@ -183,6 +190,7 @@ class MainCalActivity : AppCompatActivity() {
                 val btCalPlus:ImageButton=findViewById(R.id.btCalPlus)
                 val popup = PopupWindow(this)
                 btCalPlus.setOnClickListener {
+                    mDatabaseRef.child("Test1").setValue(test1)
                     var stHour:String=""
                     var stMinute:String=""
                     var endHour:String=""
@@ -231,7 +239,6 @@ class MainCalActivity : AppCompatActivity() {
                                         18 -> index=45
                                         19 -> index=50
                                     }
-
                                 }
                             }
                             "Tue"->{
@@ -359,8 +366,8 @@ class MainCalActivity : AppCompatActivity() {
                 val layout = createCell(550, 85, j, i, grid1)
                 val cell1: View = layoutInflater.inflate(R.layout.community_by_class, layout)
                 val idx = ((i) * (grid.columnCount - 1)) + (j)
-                val data1 = subjectData[idx].subject
-                val data2 = subjectData[idx].code.toString()
+                val data1 = subjectData[idx].Subject
+                val data2 = subjectData[idx].Code.toString()
                 cell1.findViewById<Button>(R.id.btSubjectCode).text="${data1}/${data2}"
                 cell1.findViewById<Button>(R.id.btSubjectCode).textSize=10f
 
@@ -370,6 +377,9 @@ class MainCalActivity : AppCompatActivity() {
 
 
         val btHor1 :Button = findViewById(R.id.btSchedulerHor1)
+        btHor1.setOnClickListener {
+            mDatabaseRef.child("Test1").setValue(test1)
+        }
         val btHor2 :Button = findViewById(R.id.btSchedulerHor2)
         val btHor3 :Button = findViewById(R.id.btSchedulerHor3)
 

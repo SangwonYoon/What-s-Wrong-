@@ -1,6 +1,8 @@
 package com.example.whatswrong
 
-class SubjectData( _subject: String,_code: Int,) {
-    var code = _code
-    var subject = _subject
+data class SubjectData(
+    var Subject:String?=null,
+    var Code : Int?=null
+) {
+constructor() : this("",0)
 }
