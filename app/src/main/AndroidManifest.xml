@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WhatsWrong">
 
-        <activity android:name=".ClassCommunity"
+        <activity android:name=".LoginActivity"
           android:exported="true">
 
         </activity>
@@ -21,7 +21,7 @@
             android:name=".MainCalActivity"
             android:exported="true" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".ClassCommunity"
             android:exported="true">
 
             <intent-filter>
@@ -31,7 +31,7 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".MyCommunity" />
+        <activity android:name=".MyCommunity"/>
         <activity android:name=".MainCommunity" />
         <activity android:name=".MainActivity"/>
         <activity android:name=".PostActivity"/>

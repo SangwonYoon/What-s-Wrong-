@@ -62,5 +62,18 @@ class ClassCommunity  : AppCompatActivity(){
             intent.putExtra("과목명", className)
             startActivity(intent)
         }
+        findViewById<ImageButton>(R.id.scheduler_button).setOnClickListener {
+            val intent = Intent(this, MainCalActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<ImageButton>(R.id.community_button).setOnClickListener {
+            val intent = Intent(this,MyCommunity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<ImageButton>(R.id.user_button).setOnClickListener {
+            //
+        }
     }
 }
