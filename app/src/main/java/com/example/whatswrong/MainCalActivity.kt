@@ -5,6 +5,8 @@ import android.app.DatePickerDialog
 import android.app.DatePickerDialog.OnDateSetListener
 import android.app.TimePickerDialog
 import android.content.DialogInterface
+import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.graphics.Color
 import android.os.Bundle
 import android.view.*
@@ -382,6 +384,21 @@ class MainCalActivity : AppCompatActivity() {
         }
         val btHor2 :Button = findViewById(R.id.btSchedulerHor2)
         val btHor3 :Button = findViewById(R.id.btSchedulerHor3)
+
+        findViewById<ImageButton>(R.id.scheduler_button).setOnClickListener {
+            val intent = Intent(this, MainCalActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<ImageButton>(R.id.community_button).setOnClickListener {
+            val intent = Intent(this,MyCommunity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<ImageButton>(R.id.user_button).setOnClickListener {
+            val intent = Intent(this,MyInfoActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

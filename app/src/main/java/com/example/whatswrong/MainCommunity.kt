@@ -6,7 +6,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class MainCommunity  : AppCompatActivity(){
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) { // 사용 X
         super.onCreate(savedInstanceState)
         setContentView(R.layout.community_main)
 

@@ -1,3 +1,3 @@
 package com.example.whatswrong
 
-class Posts (var post_title: String,var post_content: String, var post_user: String, var post_time: String)
+class Posts (var title: String = "", var content: String = "", var user: String = "", var time: String = "", var key : String = "", var comment : ArrayList<Comments>? = null)
