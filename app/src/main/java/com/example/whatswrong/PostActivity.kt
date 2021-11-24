@@ -9,6 +9,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -51,6 +52,9 @@ class PostActivity  : AppCompatActivity(){
         // 데이터베이스에서 데이터 가져오기
         val database = FirebaseDatabase.getInstance()
         val myRef = database.getReference("Whatswrong/Community").child(className.toString()).child(postKey.toString()).child("comment")
+        val mFirebaseAuth = FirebaseAuth.getInstance()
+        val myUid = mFirebaseAuth.uid
+        val nickRef = FirebaseDatabase.getInstance().getReference("Whatswrong")
 
         myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
@@ -81,12 +85,6 @@ class PostActivity  : AppCompatActivity(){
             builder.setView(dialog)
 
             builder.setPositiveButton("완료", DialogInterface.OnClickListener { dialogInterface, i ->
-                if(checkBox.isChecked){
-                    commentUser = "익명"
-                } else{
-                    commentUser = "user9999" // 임시 테스트용
-                }
-
                 val now = System.currentTimeMillis();
                 val date = Date(now)
                 val dateFormat = SimpleDateFormat("MM-dd hh:mm")
@@ -94,9 +92,22 @@ class PostActivity  : AppCompatActivity(){
                 dateFormat.timeZone = timezone
                 val commentTime = dateFormat.format(date)
 
-                val comment = Comments(commentUser, commentContent.text.toString(), commentTime)
-                commentList.add(comment)
-                myRef.setValue(commentList)
+                if(checkBox.isChecked){
+                    commentUser = "익명"
+                    val comment = Comments(commentUser, commentContent.text.toString(), commentTime)
+                    commentList.add(comment)
+                    myRef.setValue(commentList)
+                } else {
+                    nickRef.child("UserAccount").child(myUid!!).get().addOnSuccessListener {
+                        val temp = it.getValue(UserAccount::class.java)
+                        commentUser = temp!!.strNickname.toString()
+                        Log.d("nickname", commentUser)
+
+                        val comment = Comments(commentUser, commentContent.text.toString(), commentTime)
+                        commentList.add(comment)
+                        myRef.setValue(commentList)
+                    }
+                }
             })
             builder.setNegativeButton("취소", DialogInterface.OnClickListener { dialogInterface, i ->  })
             builder.setCancelable(false)
