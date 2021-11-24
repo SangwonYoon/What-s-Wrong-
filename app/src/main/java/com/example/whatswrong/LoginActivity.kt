@@ -28,27 +28,32 @@ class LoginActivity : AppCompatActivity() {
         mBinding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        mFirebaseAuth = FirebaseAuth.getInstance()
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Whatswrong")
+
         //login
         binding.btnLogin.setOnClickListener {
-            mFirebaseAuth = FirebaseAuth.getInstance()
-            mDatabaseRef = FirebaseDatabase.getInstance().getReference("Whatswrong")
+
 
             val myEmail = binding.etId.text.toString()
-            val myPw  = binding.etPw.text.toString()
+            val myPw = binding.etPw.text.toString()
 
-            mFirebaseAuth.signInWithEmailAndPassword(myEmail,myPw)
-                .addOnCompleteListener(this) { task ->
-                if(task.isSuccessful){
-                    val intent_main_cal = Intent(this, MainCalActivity::class.java)
-                    Toast.makeText(this, "환영합니다.", Toast.LENGTH_SHORT).show()
-                    startActivity(intent_main_cal)
-                    finish()
-                    
-                }else {
-                    Toast.makeText(this, "아이디 또는 비밀번호를 확인해주세요.", Toast.LENGTH_SHORT).show()
-                }
+            if (myEmail.isEmpty() || myPw.isEmpty()){
+                Toast.makeText(this, "아이디 또는 비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show()
+            }else {
+                mFirebaseAuth.signInWithEmailAndPassword(myEmail,myPw)
+                    .addOnCompleteListener(this) { task ->
+                        if(task.isSuccessful){
+                            val intent_main_cal = Intent(this, MainCalActivity::class.java)
+                            val intent_myInfo = Intent(this, MyInfoActivity::class.java)
+                            Toast.makeText(this, "환영합니다.", Toast.LENGTH_SHORT).show()
+                            startActivity(intent_myInfo)
+                            finish()
+                        }else {
+                            Toast.makeText(this, "아이디 또는 비밀번호를 확인해주세요.", Toast.LENGTH_SHORT).show()
+                        }
+                    }
             }
-
         }
 
 

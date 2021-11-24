@@ -236,12 +236,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:padding="5dp"
-          android:textColor="@color/black"
-          android:text="@string/Info" />
+          android:text="@string/Info"
+          android:textColor="@color/black" />
       </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
@@ -257,7 +258,7 @@
         android:layout_marginRight="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Accept" />
+        android:text="동의" />
 
       <RadioButton
         android:id="@+id/radio_Decline"
@@ -265,7 +266,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:layout_marginBottom="20dp"
-        android:text="Decline" />
+        android:text="비동의" />
     </RadioGroup>
 
     <Button

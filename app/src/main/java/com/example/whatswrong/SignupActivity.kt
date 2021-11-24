@@ -38,7 +38,7 @@ class SignupActivity : AppCompatActivity() {
   }
 
   fun isPhoneNumberFormat(phoneNumber : String) : Boolean {
-    return phoneNumber.matches("^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})\$".toRegex())
+    return phoneNumber.matches("^01([0|1|6|7|8|9]?)-([0-9]{3,4})-([0-9]{4})\$".toRegex())
   }
 
   override fun onRestart() {
@@ -155,6 +155,9 @@ class SignupActivity : AppCompatActivity() {
           }else if(myEmail.isEmpty()){
             binding.tvIdMessage.text = "이메일을 입력해주세요."
             binding.tvIdMessage.setTextColor(ContextCompat.getColor(applicationContext!!,R.color.red))
+          }else if(!snapshot.exists()){
+            isvaildID = true
+
           }else {
             binding.tvIdMessage.text = "이미 존재하는 이메일입니다."
             binding.tvIdMessage.setTextColor(ContextCompat.getColor(applicationContext!!,R.color.red))
@@ -209,8 +212,9 @@ class SignupActivity : AppCompatActivity() {
                       account.strNickname = strNickname
 
                       mDatabaseRef.child("UserAccount").child(mUser!!.uid).setValue(account)
-                      mDatabaseRef.child("Email-List").push().setValue(myEmail) //아이디중복검사 처리 미구현.
-                      Toast.makeText(this, "succeed", Toast.LENGTH_SHORT).show()
+//                      mDatabaseRef.child("Email-List").push().setValue(myEmail)
+                      mDatabaseRef.child("Email-List").child(mUser!!.uid).setValue(myEmail)
+                      Toast.makeText(this, "회원가입완료", Toast.LENGTH_SHORT).show()
                       finish()
 
                     }else {
