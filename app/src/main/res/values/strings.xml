@@ -39,4 +39,8 @@
     </string>
     <string name="myCommu">준비 중 입니다.</string>
 
+
+    <string name="io_title01">Keynote</string>
+    <string name="io_title02">Android: Open to the future</string>
+    <string name="io_title03">Wear OS by Google</string>
 </resources>
