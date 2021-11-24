@@ -80,7 +80,7 @@ class MainCalActivity : AppCompatActivity() {
 
         mFirebaseAuth = FirebaseAuth.getInstance()
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("Whatswrong")
-        val test1 = SubjectData("컴구",1234)
+        val test1 = SubjectData("컴구",1)
         mDatabaseRef.child("Test1").setValue(test1)
 
 //        mDatabaseRef.setValue(SubjectData("컴구",1234))
