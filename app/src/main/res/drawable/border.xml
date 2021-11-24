@@ -8,7 +8,7 @@
                 android:color="#dcdcdc" />
 
             <solid
-                android:color="#FFF" />
+                android:id="@+id/gridColor" />
         </shape>
     </item>
 </layer-list>

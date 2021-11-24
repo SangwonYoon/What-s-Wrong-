@@ -3,33 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
+    <TextView
+        android:id="@+id/scheduler_item_subject"
         android:layout_width="66dp"
         android:layout_height="35dp"
         android:background="@drawable/border"
-        android:orientation="vertical"
-        >
-        <TextView
-            android:id="@+id/scheduler_item_subject"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:text=""
-            android:paddingTop="7dp"
-            android:textAlignment="center"
-            android:textSize="10sp"
-            android:textStyle="bold"
-            tools:ignore="MissingConstraints" />
-        <TextView
-            android:id="@+id/scheduler_item_professor"
-            android:layout_width="match_parent"
-            android:layout_height="15dp"
-            android:text=""
-            android:textSize="9sp"
-            android:textAlignment="center"/>
-
-
-
-    </LinearLayout>
+        android:text=""
+        android:paddingTop="8dp"
+        android:textAlignment="center"
+        android:textSize="9sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
