@@ -195,4 +195,40 @@
     app:layout_constraintStart_toEndOf="@+id/btn_logout"
     app:layout_constraintTop_toBottomOf="@+id/btn_help" />
 
+  <ImageButton
+      android:id="@+id/scheduler_button"
+      android:layout_width="0dp"
+      android:layout_height="40dp"
+      android:background="@drawable/bottom_button_bg"
+      android:padding="0dp"
+      android:src="@drawable/scheduler_button"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/community_button"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent" />
+
+  <ImageButton
+      android:id="@+id/community_button"
+      android:layout_width="0dp"
+      android:layout_height="40dp"
+      android:background="@drawable/bottom_button_bg"
+      android:padding="0dp"
+      android:src="@drawable/community_button"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@+id/user_button"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/scheduler_button" />
+
+  <ImageButton
+      android:id="@+id/user_button"
+      android:layout_width="0dp"
+      android:layout_height="40dp"
+      android:background="@drawable/bottom_button_bg"
+      android:padding="0dp"
+      android:src="@drawable/user_button"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toEndOf="@+id/community_button" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

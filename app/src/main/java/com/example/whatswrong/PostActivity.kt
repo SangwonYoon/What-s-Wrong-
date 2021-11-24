@@ -1,6 +1,7 @@
 package com.example.whatswrong
 
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.*
@@ -100,6 +101,21 @@ class PostActivity  : AppCompatActivity(){
             builder.setNegativeButton("취소", DialogInterface.OnClickListener { dialogInterface, i ->  })
             builder.setCancelable(false)
             builder.show()
+        }
+
+        findViewById<ImageButton>(R.id.scheduler_button).setOnClickListener {
+            val intent = Intent(this, MainCalActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<ImageButton>(R.id.community_button).setOnClickListener {
+            val intent = Intent(this,MyCommunity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<ImageButton>(R.id.user_button).setOnClickListener {
+            val intent = Intent(this,MyInfoActivity::class.java)
+            startActivity(intent)
         }
     }
 }

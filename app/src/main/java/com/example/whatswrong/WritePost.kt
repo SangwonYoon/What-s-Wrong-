@@ -1,10 +1,12 @@
 package com.example.whatswrong
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.database.FirebaseDatabase
 import java.sql.Time
@@ -53,6 +55,21 @@ class WritePost  : AppCompatActivity(){
             myRef.child(now.toString()).setValue(post)
 
             finish()
+        }
+
+        findViewById<ImageButton>(R.id.scheduler_button).setOnClickListener {
+            val intent = Intent(this, MainCalActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<ImageButton>(R.id.community_button).setOnClickListener {
+            val intent = Intent(this,MyCommunity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<ImageButton>(R.id.user_button).setOnClickListener {
+            val intent = Intent(this,MyInfoActivity::class.java)
+            startActivity(intent)
         }
     }
 }

@@ -73,7 +73,8 @@ class ClassCommunity  : AppCompatActivity(){
         }
 
         findViewById<ImageButton>(R.id.user_button).setOnClickListener {
-            //
+            val intent = Intent(this,MyInfoActivity::class.java)
+            startActivity(intent)
         }
     }
 }
