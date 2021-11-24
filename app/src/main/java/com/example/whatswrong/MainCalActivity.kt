@@ -14,8 +14,9 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.toColor
 import androidx.recyclerview.widget.GridLayoutManager
-import kotlinx.android.synthetic.main.activity_main_cal.*
 import java.util.concurrent.ScheduledExecutorService
+
+//import kotlinx.android.synthetic.main.activity_main_cal.*
 
 class MainCalActivity : AppCompatActivity() {
     val days = arrayOf("", "Mon", "Tue", "Wed", "Thu", "Fri")

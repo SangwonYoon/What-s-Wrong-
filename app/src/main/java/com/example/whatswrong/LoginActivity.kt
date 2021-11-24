@@ -44,7 +44,7 @@ class LoginActivity : AppCompatActivity() {
                 mFirebaseAuth.signInWithEmailAndPassword(myEmail,myPw)
                     .addOnCompleteListener(this) { task ->
                         if(task.isSuccessful){
-                            val intent_main_cal = Intent(this, MainCalActivity::class.java)
+//                            val intent_main_cal = Intent(this, MainCalActivity::class.java)
                             val intent_myInfo = Intent(this, MyInfoActivity::class.java)
                             Toast.makeText(this, "환영합니다.", Toast.LENGTH_SHORT).show()
                             startActivity(intent_myInfo)
