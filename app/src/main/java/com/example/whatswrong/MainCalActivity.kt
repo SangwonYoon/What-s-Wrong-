@@ -10,7 +10,6 @@ import android.os.Bundle
 import android.view.*
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
@@ -22,6 +21,7 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_cal_plus_dialog.*
 import java.util.*
 import android.widget.DatePicker
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.get
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_cal_plus_dialog.view.*
