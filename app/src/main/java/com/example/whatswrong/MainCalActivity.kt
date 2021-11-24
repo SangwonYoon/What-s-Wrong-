@@ -1,34 +1,23 @@
 package com.example.whatswrong
 
 import android.annotation.SuppressLint
-import android.app.DatePickerDialog
-import android.app.DatePickerDialog.OnDateSetListener
-import android.app.TimePickerDialog
 import android.content.DialogInterface
 import android.graphics.Color
 import android.os.Bundle
 import android.view.*
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
-import kotlinx.android.synthetic.main.activity_main_cal.*
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ktx.database
-import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.activity_cal_plus_dialog.*
-import java.util.*
-import android.widget.DatePicker
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.get
-import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_cal_plus_dialog.view.*
-import kotlinx.android.synthetic.main.scheduler_item.*
-import kotlinx.android.synthetic.main.time_picker.*
 import kotlinx.android.synthetic.main.time_picker.view.*
-import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.set
 
 
 class MainCalActivity : AppCompatActivity() {
@@ -203,8 +192,8 @@ class MainCalActivity : AppCompatActivity() {
                     val cancel = view.bt_dialog_cancel.setOnClickListener{
                         popup.dismiss()
                     }
-                    val add = view.bt_dialog_add.setOnClickListener{
-                        var textSubject :String = view.spinner_subjects.selectedItem.toString()
+                    val add = view.findViewById<Button>(R.id.bt_dialog_add).setOnClickListener{
+                        var textSubject :String = view.findViewById<Spinner>(R.id.spinner_subjects).selectedItem.toString()
                         var textDays : String = ""
                         textDays=view.spinner_days.selectedItem.toString()
                         when(textDays){
@@ -314,6 +303,8 @@ class MainCalActivity : AppCompatActivity() {
                             index,
                             textSubject.toString(),
                         )
+                        mDatabaseRef.child("Test1").push().setValue(SchdulerData(index,textSubject.toString()))
+
                         refreshCell(calendarData)
                         popup.dismiss()
                     }
@@ -378,7 +369,7 @@ class MainCalActivity : AppCompatActivity() {
 
         val btHor1 :Button = findViewById(R.id.btSchedulerHor1)
         btHor1.setOnClickListener {
-            mDatabaseRef.child("Test1").setValue(test1)
+            mDatabaseRef.child("Test1").setValue(SchdulerData(0,"dd"))
         }
         val btHor2 :Button = findViewById(R.id.btSchedulerHor2)
         val btHor3 :Button = findViewById(R.id.btSchedulerHor3)
