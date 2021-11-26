@@ -91,6 +91,7 @@ class MainCalActivity : AppCompatActivity() {
             0 to SchdulerData(null, ""),
         )
 
+
         testSubject.addOnSuccessListener {
             strSubject=it.value.toString()
             arrSubject=strSubject.split(",")
@@ -100,6 +101,92 @@ class MainCalActivity : AppCompatActivity() {
             }
 
             refreshCell(calendarData)
+            var setSubject = arrSubject.distinct()
+            Log.i("firebase", "Got value $setSubject}")
+            val grid1: GridLayout = findViewById(R.id.gridSubject)
+            grid1.rowCount=setSubject.size/2
+            grid1.columnCount=2
+
+            var idx = 0
+            for (i: Int in 0 until grid1.rowCount) {
+                for (j: Int in 0 until grid1.columnCount) {
+                    if (idx<setSubject.size-1){
+                        val layout = createCell(550, 85, j, i, grid1)
+                        val cell1: View = layoutInflater.inflate(R.layout.community_by_class, layout)
+
+                        idx=(i*2) + (j)+1
+                        var data1 = setSubject[idx]
+                        cell1.findViewById<Button>(R.id.btSubjectCode).text="${data1}"
+                        cell1.findViewById<Button>(R.id.btSubjectCode).textSize=10f
+
+                    }
+
+                }
+            }
+            val grid: GridLayout = findViewById(R.id.recyclerGrid)
+        grid.columnCount = 6
+        grid.rowCount = 12
+        createCell(100, 45, 0, 0, grid)
+
+        for (i: Int in 1 until grid.columnCount) {
+            val layout = createCell(175, 70, i, 0, grid)
+            val cell: View = layoutInflater.inflate(R.layout.scheduler_item, layout)
+            val data = days[i]
+            cell?.findViewById<TextView>(R.id.scheduler_item_subject)?.text = data
+            cells[i] = cell
+        }
+        for (i: Int in 1 until grid.rowCount) {
+            val layout = createCell(100, 50, 0, i, grid)
+            val text = TextView(this)
+            text.text = times[(i - 1)].toString()
+            text.textSize = 12f
+            text.setTextColor(ContextCompat.getColor(applicationContext!!,R.color.colortime))
+            text.gravity = Gravity.BOTTOM or Gravity.RIGHT
+            text.layoutParams = ConstraintLayout.LayoutParams(
+                ConstraintLayout.LayoutParams.MATCH_PARENT,
+                ConstraintLayout.LayoutParams.MATCH_PARENT
+            )
+            layout.addView(text)
+        }
+        val gridLayoutManager:GridLayoutManager
+
+        val BackgroundColors = arrayOf(Color.rgb(223, 250, 180),
+            Color.rgb(234, 249, 209),
+            Color.rgb(213, 255, 146),
+            Color.rgb(207, 225, 177))
+        for (i: Int in 1 until grid.rowCount) {
+            for (j: Int in 1 until grid.columnCount) {
+                val layout = createCell(175, 85, j, i, grid)
+                val cell: View = layoutInflater.inflate(R.layout.scheduler_item, layout)
+                val idx = ((i - 1) * (grid.columnCount - 1)) + (j - 1)
+                cells[idx] = cell
+                if (calendarData.containsKey(idx)) {
+                    val data = calendarData[idx]
+                    cell.setBackgroundColor(BackgroundColors[i % 4])
+                    cell.findViewById<TextView>(R.id.scheduler_item_subject).text = data?.subject
+
+                    cell.setOnLongClickListener {
+                        val builder = AlertDialog.Builder(this@MainCalActivity)
+                        builder.setMessage("삭제하시겠습니까?")
+                            .setPositiveButton("삭제",
+                                DialogInterface.OnClickListener { dialog, id ->
+                                    calendarData.remove(idx)
+                                    cell.setBackgroundColor(Color.WHITE)
+
+
+                                    refreshCell(calendarData)
+                                })
+                            .setNegativeButton("취소",
+                                DialogInterface.OnClickListener { dialog, id ->
+                                    dialog.cancel()
+                                })
+                            .create().show()
+                        return@setOnLongClickListener true
+                    }
+                }
+            }
+        }
+
 
         }.addOnFailureListener {
             Log.e("firebase", "Error getting data", it)
@@ -320,9 +407,9 @@ class MainCalActivity : AppCompatActivity() {
                         )
                         var tmpIndex : String=""
                         var tmpSubject : String=""
-                        for (i :Int in 0..54) if(calendarData[i]?.index!=null){tmpIndex ="${tmpIndex} ${calendarData[i]?.index}"}
+                        for (i :Int in 0..54) if(calendarData[i]?.index!=null){tmpIndex ="${tmpIndex},${calendarData[i]?.index}"}
                         mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("index").setValue(tmpIndex)
-                        for (i :Int in 0..54) if(calendarData[i]?.subject!=null){tmpSubject ="${tmpSubject} ${calendarData[i]?.subject}"}
+                        for (i :Int in 0..54) if(calendarData[i]?.subject!=null){tmpSubject ="${tmpSubject},${calendarData[i]?.subject}"}
                         mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("subject").setValue(tmpSubject)
                         refreshCell(calendarData)
                         popup.dismiss()
@@ -331,24 +418,21 @@ class MainCalActivity : AppCompatActivity() {
                 }
             }
         }
-        val grid1: GridLayout = findViewById(R.id.gridSubject)
-        grid1.rowCount=3
-        grid1.columnCount=2
-        for (i: Int in 0 until grid1.rowCount) {
-            for (j: Int in 0 until grid1.columnCount) {
-                val layout = createCell(550, 85, j, i, grid1)
-                val cell1: View = layoutInflater.inflate(R.layout.community_by_class, layout)
-                val idx = ((i) * (grid.columnCount - 1)) + (j)
-
-                var data1 = calendarData[idx]?.subject
-                if (calendarData[j]?.subject!=""){
-                    data1=calendarData[j]?.subject
-                }
-                cell1.findViewById<Button>(R.id.btSubjectCode).text="${data1}"
-                cell1.findViewById<Button>(R.id.btSubjectCode).textSize=10f
-
-            }
-        }
+//        val grid1: GridLayout = findViewById(R.id.gridSubject)
+//        grid1.rowCount=3
+//        grid1.columnCount=2
+//        for (i: Int in 0 until grid1.rowCount) {
+//            for (j: Int in 0 until grid1.columnCount) {
+//                val layout = createCell(550, 85, j, i, grid1)
+//                val cell1: View = layoutInflater.inflate(R.layout.community_by_class, layout)
+//                val idx = ((i) * (grid1.columnCount - 1)) + (j)
+//
+//                var data1 = calendarData[j]?.subject
+//                cell1.findViewById<Button>(R.id.btSubjectCode).text="${data1}"
+//                cell1.findViewById<Button>(R.id.btSubjectCode).textSize=10f
+//
+//            }
+//        }
 
 
 
@@ -359,6 +443,7 @@ class MainCalActivity : AppCompatActivity() {
         val btHor3 :Button = findViewById(R.id.btSchedulerHor3)
 
     }
+
 
 
 
