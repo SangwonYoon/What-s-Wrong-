@@ -26,17 +26,17 @@ class MainCalActivity : AppCompatActivity() {
 
     val days = arrayOf("", "Mon", "Tue", "Wed", "Thu", "Fri")
     val times = Array(11) { i -> ((i + 9).toString()) }
-    var calendarData = mutableMapOf(
-        0 to SchdulerData(0, "응용통계학"),
-        15 to SchdulerData(15, "인공지능"),
-        20 to SchdulerData(20, "컴퓨터구조"),
-        21 to SchdulerData(21, "이산수학"),
-        26 to SchdulerData(26, "객지프"),
-        4 to SchdulerData(4, "응용통계학"),
-        8 to SchdulerData(8, "객체지향프로그래밍"),
-        33 to SchdulerData(33, "모바일프로그래밍"),
-        40 to SchdulerData(40, "인공지능"),
-    )
+//    var calendarData = mutableMapOf(
+//        0 to SchdulerData(0, "응용통계학"),
+//        15 to SchdulerData(15, "인공지능"),
+//        20 to SchdulerData(20, "컴퓨터구조"),
+//        21 to SchdulerData(21, "이산수학"),
+//        26 to SchdulerData(26, "객지프"),
+//        4 to SchdulerData(4, "응용통계학"),
+//        8 to SchdulerData(8, "객체지향프로그래밍"),
+//        33 to SchdulerData(33, "모바일프로그래밍"),
+//        40 to SchdulerData(40, "인공지능"),
+//    )
     var subjectData = mutableListOf<SubjectData>(
         SubjectData("컴구",1234),
         SubjectData("이산수학",1234),
@@ -72,17 +72,42 @@ class MainCalActivity : AppCompatActivity() {
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("Whatswrong")
         val test1 = SubjectData("컴구",1)
         val testIndex = mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("index").get()
+        var strIndex : String = ""
+        var strSubject : String =""
+        var arrIndex = listOf<String>(" ")
+        var arrSubject = listOf<String>(" ")
         testIndex.addOnSuccessListener {
-            Log.i("firebase", "Got value ${it.value}")
+            strIndex=it.value.toString()
+            arrIndex= strIndex.split(" ")
+            Log.i("firebase", "Got value ${arrIndex}")
+
         }.addOnFailureListener {
             Log.e("firebase", "Error getting data", it)
         }
         val testSubject = mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("subject").get()
+
+
+        var calendarData = mutableMapOf(
+            0 to SchdulerData(0, ""),
+        )
+
         testSubject.addOnSuccessListener {
-            Log.i("firebase", "Got value ${it.value}")
+            strSubject=it.value.toString()
+            arrSubject=strSubject.split(" ")
+            Log.i("firebase", "Got value ${arrSubject}")
+            for(i in 1..arrIndex.size-1){
+                calendarData[arrIndex[i].toInt()] = SchdulerData(arrIndex[i].toInt(),arrSubject[i])
+            }
+
+            refreshCell(calendarData)
+
         }.addOnFailureListener {
             Log.e("firebase", "Error getting data", it)
         }
+
+
+
+
 
         val grid: GridLayout = findViewById(R.id.recyclerGrid)
         grid.columnCount = 6
@@ -347,7 +372,6 @@ class MainCalActivity : AppCompatActivity() {
 
         val btHor1 :Button = findViewById(R.id.btSchedulerHor1)
         btHor1.setOnClickListener {
-            mDatabaseRef.child("Test1").setValue(SchdulerData(0,"dd"))
         }
         val btHor2 :Button = findViewById(R.id.btSchedulerHor2)
         val btHor3 :Button = findViewById(R.id.btSchedulerHor3)
