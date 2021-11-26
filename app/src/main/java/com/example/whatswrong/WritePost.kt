@@ -21,6 +21,7 @@ class WritePost  : AppCompatActivity(){
 
         val intent = intent
         val className = intent.getStringExtra("과목명").toString()
+        Log.d("수신 양호", className)
 
         val database = FirebaseDatabase.getInstance()
         val myRef = database.getReference("Whatswrong/Community").child(className)

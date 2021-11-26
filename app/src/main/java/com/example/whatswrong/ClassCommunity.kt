@@ -19,9 +19,8 @@ class ClassCommunity  : AppCompatActivity(){
         setContentView(R.layout.community_class)
 
         // 과목명 정보 받아오기 & 데이터 베이스에서 post 데이터 가져와서 postList에 넣기
-        //val intent = intent
-        //val className = intent.getStringExtra("과목명") // 과목명 받아오기
-        val className = "모바일 프로그래밍" // 임시 테스트용
+        val intent = intent
+        val className = intent.getStringExtra("과목명") // 과목명 받아오기
         findViewById<TextView>(R.id.class_name).text = className
 
         // recycler view adapter 세팅
@@ -30,7 +29,7 @@ class ClassCommunity  : AppCompatActivity(){
         rv_post.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false)
         rv_post.setHasFixedSize(true)
 
-        val mAdapter = PostAdapter(this, postList, className)
+        val mAdapter = PostAdapter(this, postList, className!!)
         rv_post.adapter = mAdapter
 
         //
