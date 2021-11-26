@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.DialogInterface
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
@@ -32,7 +33,7 @@ class MainCalActivity : AppCompatActivity() {
         21 to SchdulerData(21, "이산수학"),
         26 to SchdulerData(26, "객지프"),
         4 to SchdulerData(4, "응용통계학"),
-        8 to SchdulerData(8, "객지프"),
+        8 to SchdulerData(8, "객체지향프로그래밍"),
         33 to SchdulerData(33, "모바일프로그래밍"),
         40 to SchdulerData(40, "인공지능"),
     )
@@ -70,9 +71,18 @@ class MainCalActivity : AppCompatActivity() {
         mFirebaseAuth = FirebaseAuth.getInstance()
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("Whatswrong")
         val test1 = SubjectData("컴구",1)
-        mDatabaseRef.child("Test1").setValue(test1)
-
-//        mDatabaseRef.setValue(SubjectData("컴구",1234))
+        val testIndex = mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("index").get()
+        testIndex.addOnSuccessListener {
+            Log.i("firebase", "Got value ${it.value}")
+        }.addOnFailureListener {
+            Log.e("firebase", "Error getting data", it)
+        }
+        val testSubject = mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("subject").get()
+        testSubject.addOnSuccessListener {
+            Log.i("firebase", "Got value ${it.value}")
+        }.addOnFailureListener {
+            Log.e("firebase", "Error getting data", it)
+        }
 
         val grid: GridLayout = findViewById(R.id.recyclerGrid)
         grid.columnCount = 6
@@ -304,8 +314,12 @@ class MainCalActivity : AppCompatActivity() {
                             index,
                             textSubject
                         )
-                        mDatabaseRef.child("Test2").push().setValue(calendarData[index])
-
+                        var tmpIndex : String=""
+                        var tmpSubject : String=""
+                        for (i :Int in 0..54) if(calendarData[i]?.index!=null){tmpIndex ="${tmpIndex} ${calendarData[i]?.index}"}
+                        mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("index").setValue(tmpIndex)
+                        for (i :Int in 0..54) if(calendarData[i]?.subject!=null){tmpSubject ="${tmpSubject} ${calendarData[i]?.subject}"}
+                        mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("subject").setValue(tmpSubject)
                         refreshCell(calendarData)
                         popup.dismiss()
                     }
