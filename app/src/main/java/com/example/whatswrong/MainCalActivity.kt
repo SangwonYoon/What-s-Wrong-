@@ -26,31 +26,6 @@ class MainCalActivity : AppCompatActivity() {
 
     val days = arrayOf("", "Mon", "Tue", "Wed", "Thu", "Fri")
     val times = Array(11) { i -> ((i + 9).toString()) }
-//    var calendarData = mutableMapOf(
-//        0 to SchdulerData(0, "응용통계학"),
-//        15 to SchdulerData(15, "인공지능"),
-//        20 to SchdulerData(20, "컴퓨터구조"),
-//        21 to SchdulerData(21, "이산수학"),
-//        26 to SchdulerData(26, "객지프"),
-//        4 to SchdulerData(4, "응용통계학"),
-//        8 to SchdulerData(8, "객체지향프로그래밍"),
-//        33 to SchdulerData(33, "모바일프로그래밍"),
-//        40 to SchdulerData(40, "인공지능"),
-//    )
-    var subjectData = mutableListOf<SubjectData>(
-        SubjectData("컴구",1234),
-        SubjectData("이산수학",1234),
-        SubjectData("응통",1234),
-        SubjectData("생활속스포츠",1234),
-        SubjectData("모바일프로그래밍",1234),
-        SubjectData("모바일프로그래밍",1234),
-        SubjectData("컴구",1234),
-        SubjectData("이산수학",1234),
-        SubjectData("응통",1234),
-        SubjectData("생활속스포츠",1234),
-        SubjectData("모바일프로그래밍",1234),
-        SubjectData("모바일프로그래밍",1234),
-    )
     var cells = mutableMapOf<Int, View>()
     //FireBase & RealTimeBase connect
     private lateinit var mFirebaseAuth : FirebaseAuth // 파이어베이스 인증처리
@@ -58,14 +33,6 @@ class MainCalActivity : AppCompatActivity() {
     @SuppressLint("CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        val gridLayoutManager:GridLayoutManager
-//
-//        gridLayoutManager.spanSizeLookup= object : GridLayoutManager.SpanSizeLookup {
-//                                    override fun getSpanSize(position: Int): Int {
-//                            if (idx>3) return 2
-//                            else return 1
-//                        }
-//                    }
         setContentView(R.layout.activity_main_cal)
 
         mFirebaseAuth = FirebaseAuth.getInstance()
@@ -92,6 +59,7 @@ class MainCalActivity : AppCompatActivity() {
         )
 
 
+        var setSubject= listOf("")
         testSubject.addOnSuccessListener {
             strSubject=it.value.toString()
             arrSubject=strSubject.split(",")
@@ -101,7 +69,7 @@ class MainCalActivity : AppCompatActivity() {
             }
 
             refreshCell(calendarData)
-            var setSubject = arrSubject.distinct()
+            setSubject = arrSubject.distinct()
             Log.i("firebase", "Got value $setSubject}")
             val grid1: GridLayout = findViewById(R.id.gridSubject)
             grid1.rowCount=setSubject.size/2
@@ -162,7 +130,7 @@ class MainCalActivity : AppCompatActivity() {
                 cells[idx] = cell
                 if (calendarData.containsKey(idx)) {
                     val data = calendarData[idx]
-                    cell.setBackgroundColor(BackgroundColors[i % 4])
+                    cell.setBackgroundColor(BackgroundColors[(i*j*i+i+j*j) % 4])
                     cell.findViewById<TextView>(R.id.scheduler_item_subject).text = data?.subject
 
                     cell.setOnLongClickListener {
@@ -171,6 +139,18 @@ class MainCalActivity : AppCompatActivity() {
                             .setPositiveButton("삭제",
                                 DialogInterface.OnClickListener { dialog, id ->
                                     calendarData.remove(idx)
+                                    arrIndex.minus(idx.toString())
+                                    arrSubject.minus(calendarData[idx].toString())
+
+                                    var tmpIndex : String=""
+                                    var tmpSubject : String=""
+                                    for (i :Int in 1 until arrIndex.size) tmpIndex ="${tmpIndex},${arrIndex[i]}"
+                                    mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("index").setValue(tmpIndex)
+                                    for (i :Int in 1 until arrSubject.size) tmpSubject ="${tmpSubject},${arrSubject[i]}"
+                                    mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("subject").setValue(tmpSubject)
+
+
+
                                     cell.setBackgroundColor(Color.WHITE)
 
 
@@ -186,7 +166,6 @@ class MainCalActivity : AppCompatActivity() {
                 }
             }
         }
-
 
         }.addOnFailureListener {
             Log.e("firebase", "Error getting data", it)
@@ -235,7 +214,7 @@ class MainCalActivity : AppCompatActivity() {
                 cells[idx] = cell
                 if (calendarData.containsKey(idx)){
                     val data = calendarData[idx]
-                    cell.setBackgroundColor(BackgroundColors[i%4])
+                    cell.setBackgroundColor(BackgroundColors[(i*j*i+i+j*j)%4])
                     cell.findViewById<TextView>(R.id.scheduler_item_subject).text= data?.subject
 
                     cell.setOnLongClickListener {
@@ -255,28 +234,7 @@ class MainCalActivity : AppCompatActivity() {
                         return@setOnLongClickListener true
                     }
                 }
-//                else{
-//                    layout.setOnClickListener {
-//                        val view = layoutInflater.inflate(R.layout.dialog_scheculer,null)
-//                        val builder : AlertDialog.Builder = AlertDialog.Builder(this@MainCalActivity)
-//                        builder
-//                            .setView(view)
-//                            .setPositiveButton(
-//                                "등록",
-//                                DialogInterface.OnClickListener { dialog, index ->
-//                                    calendarData[idx] = SchdulerData(
-//                                        idx,
-//                                        view.findViewById<EditText>(R.id.dialog_scheduler_subject).text.toString(),
-//                                    )
-//                                    layout.setBackgroundColor(BackgroundColors[i%4])
-//                                    refreshCell(calendarData)
-//                                })
-//                            .setNegativeButton("취소", DialogInterface.OnClickListener { dialog, _ ->
-//                                dialog.cancel()
-//                            })
-//                            .create().show()
-//                    }
-//                }
+//
                 val btCalPlus:ImageButton=findViewById(R.id.btCalPlus)
                 val popup = PopupWindow(this)
                 btCalPlus.setOnClickListener {
@@ -411,6 +369,8 @@ class MainCalActivity : AppCompatActivity() {
                         mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("index").setValue(tmpIndex)
                         for (i :Int in 0..54) if(calendarData[i]?.subject!=null){tmpSubject ="${tmpSubject},${calendarData[i]?.subject}"}
                         mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("subject").setValue(tmpSubject)
+                        Toast.makeText(this, "어플리케이션을 재시작하면 \n하단 버튼이 추가됩니다.", Toast.LENGTH_SHORT).show()
+
                         refreshCell(calendarData)
                         popup.dismiss()
                     }
@@ -461,6 +421,7 @@ class MainCalActivity : AppCompatActivity() {
         grid.addView(layout)
         return layout
     }
+
     private fun refreshCell(datas: MutableMap<Int, SchdulerData>) {
         val grid: GridLayout = findViewById(R.id.recyclerGrid)
         val BackgroundColors = arrayOf(Color.rgb(223, 250, 180),
@@ -475,7 +436,7 @@ class MainCalActivity : AppCompatActivity() {
                 if (datas.containsKey(idx)) {
                     val data = datas[idx]
                     cell?.findViewById<TextView>(R.id.scheduler_item_subject)?.text = data?.subject
-                    cell?.setBackgroundColor(BackgroundColors[(i*j*i+i+j)%4])
+                    cell?.setBackgroundColor(BackgroundColors[(i*j*i+i+j*j)%4])
                 } else {
                     cell?.findViewById<TextView>(R.id.scheduler_item_subject)?.text = ""
 
