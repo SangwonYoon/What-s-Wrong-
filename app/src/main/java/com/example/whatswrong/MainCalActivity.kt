@@ -37,7 +37,6 @@ class MainCalActivity : AppCompatActivity() {
 
         mFirebaseAuth = FirebaseAuth.getInstance()
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("Whatswrong")
-        val test1 = SubjectData("컴구",1)
         val testIndex = mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("index").get()
         var strIndex : String = ""
         var strSubject : String =""
@@ -130,7 +129,7 @@ class MainCalActivity : AppCompatActivity() {
                 cells[idx] = cell
                 if (calendarData.containsKey(idx)) {
                     val data = calendarData[idx]
-                    cell.setBackgroundColor(BackgroundColors[(i*j*i+i+j*j) % 4])
+                    cell.setBackgroundColor(BackgroundColors[(i*j+i+j*j) % 4])
                     cell.findViewById<TextView>(R.id.scheduler_item_subject).text = data?.subject
 
                     cell.setOnLongClickListener {
@@ -214,7 +213,7 @@ class MainCalActivity : AppCompatActivity() {
                 cells[idx] = cell
                 if (calendarData.containsKey(idx)){
                     val data = calendarData[idx]
-                    cell.setBackgroundColor(BackgroundColors[(i*j*i+i+j*j)%4])
+                    cell.setBackgroundColor(BackgroundColors[(i*j+i+j*j)%4])
                     cell.findViewById<TextView>(R.id.scheduler_item_subject).text= data?.subject
 
                     cell.setOnLongClickListener {
@@ -378,21 +377,6 @@ class MainCalActivity : AppCompatActivity() {
                 }
             }
         }
-//        val grid1: GridLayout = findViewById(R.id.gridSubject)
-//        grid1.rowCount=3
-//        grid1.columnCount=2
-//        for (i: Int in 0 until grid1.rowCount) {
-//            for (j: Int in 0 until grid1.columnCount) {
-//                val layout = createCell(550, 85, j, i, grid1)
-//                val cell1: View = layoutInflater.inflate(R.layout.community_by_class, layout)
-//                val idx = ((i) * (grid1.columnCount - 1)) + (j)
-//
-//                var data1 = calendarData[j]?.subject
-//                cell1.findViewById<Button>(R.id.btSubjectCode).text="${data1}"
-//                cell1.findViewById<Button>(R.id.btSubjectCode).textSize=10f
-//
-//            }
-//        }
 
 
 
@@ -436,7 +420,7 @@ class MainCalActivity : AppCompatActivity() {
                 if (datas.containsKey(idx)) {
                     val data = datas[idx]
                     cell?.findViewById<TextView>(R.id.scheduler_item_subject)?.text = data?.subject
-                    cell?.setBackgroundColor(BackgroundColors[(i*j*i+i+j*j)%4])
+                    cell?.setBackgroundColor(BackgroundColors[(i*j+i+j*j)%4])
                 } else {
                     cell?.findViewById<TextView>(R.id.scheduler_item_subject)?.text = ""
 
