@@ -179,11 +179,10 @@ class MainCalActivity : AppCompatActivity() {
                 val btCalPlus:ImageButton=findViewById(R.id.btCalPlus)
                 val popup = PopupWindow(this)
                 btCalPlus.setOnClickListener {
-                    mDatabaseRef.child("Test1").setValue(test1)
-                    var stHour:String=""
-                    var stMinute:String=""
-                    var endHour:String=""
-                    var endMinute:String=""
+                    var stHour:Int = 0
+                    var stMinute:Int = 0
+                    var endHour:Int = 0
+                    var endMinute:Int = 0
                     var index :Int = 0
                     val view = layoutInflater.inflate(R.layout.activity_cal_plus_dialog,null)
                     popup.contentView=view
@@ -195,7 +194,9 @@ class MainCalActivity : AppCompatActivity() {
                     val add = view.findViewById<Button>(R.id.bt_dialog_add).setOnClickListener{
                         var textSubject :String = view.findViewById<Spinner>(R.id.spinner_subjects).selectedItem.toString()
                         var textDays : String = ""
-                        textDays=view.spinner_days.selectedItem.toString()
+                        stHour=view.findViewById<Spinner>(R.id.spinner_start_hour).selectedItem.toString().toInt()
+                        endHour=view.findViewById<Spinner>(R.id.spinner_end_hour).selectedItem.toString().toInt()
+                        textDays=view.findViewById<Spinner>(R.id.spinner_days).selectedItem.toString()
                         when(textDays){
                             "Mon"->{
                                 if ((endHour.toInt()-stHour.toInt())==1){
@@ -301,49 +302,12 @@ class MainCalActivity : AppCompatActivity() {
                         }
                         calendarData[index] = SchdulerData(
                             index,
-                            textSubject.toString(),
+                            textSubject
                         )
-                        mDatabaseRef.child("Test1").push().setValue(SchdulerData(index,textSubject.toString()))
+                        mDatabaseRef.child("Test2").push().setValue(calendarData[index])
 
                         refreshCell(calendarData)
                         popup.dismiss()
-                    }
-
-                    val startTime = view.bt_dialog_start_time.setOnClickListener{
-
-                        val popup1=PopupWindow(this)
-                        val view1=layoutInflater.inflate(R.layout.time_picker,null)
-                        popup1.contentView=view1
-                        popup1.showAtLocation(view1,Gravity.CENTER,0,0)
-                        val cancelPopup1 = view1.bt_popup_time_cancel.setOnClickListener {
-                            popup1.dismiss()
-                        }
-                        val tp = view1.timePicker.setOnTimeChangedListener { timePicker, i, i2 ->
-                            stHour = i.toString()
-                            stMinute=i2.toString()
-                        }
-                        val checkPopup1=view1.bt_popup_time_accept.setOnClickListener {
-                            view.text_dialog_start_time.setText("${stHour+":"+stMinute}")
-                            popup1.dismiss()
-                        }
-                    }
-                    val endTime = view.bt_dialog_end_time.setOnClickListener{
-                        val popup1=PopupWindow(this)
-                        val view1=layoutInflater.inflate(R.layout.time_picker,null)
-                        popup1.contentView=view1
-                        popup1.showAtLocation(view1,Gravity.CENTER,0,0)
-                        val cancelPopup1 = view1.bt_popup_time_cancel.setOnClickListener {
-                            popup1.dismiss()
-                        }
-                        val tp = view1.timePicker.setOnTimeChangedListener { timePicker, i, i2 ->
-                            endHour = i.toString()
-                            endMinute=i2.toString()
-                        }
-                        val checkPopup1=view1.bt_popup_time_accept.setOnClickListener {
-                            view.text_dialog_end_time.setText("${endHour+":"+endMinute}")
-                            popup1.dismiss()
-                        }
-
                     }
                     popup.showAsDropDown(btCalPlus)
                 }

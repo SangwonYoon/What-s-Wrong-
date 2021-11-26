@@ -24,7 +24,7 @@
             android:exported="true" />
         <activity
             android:name=".ClassCommunity"
-            android:exported="true"></activity>
+            android:exported="true"/>
         <activity android:name=".MyCommunity" />
         <activity android:name=".MainCommunity" />
         <activity android:name=".MainActivity" />

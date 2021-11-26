@@ -33,6 +33,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="과목 :"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"/>
             <Spinner
                 android:id="@+id/spinner_subjects"
                 android:layout_marginTop="25dp"
@@ -47,6 +55,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:text="요일 :"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"/>
             <Spinner
                 android:id="@+id/spinner_days"
                 android:layout_marginTop="25dp"
@@ -63,40 +79,79 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:layout_marginTop="30dp"
-                android:id="@+id/text_dialog_start_time"
-                android:layout_width="250dp"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
-                android:text="Start Time"
-                android:textSize="25sp"
-                android:textAlignment="center"/>
-            <ImageButton
-                android:id="@+id/bt_dialog_start_time"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="28dp"
-                android:background="@null"
-                android:src="@drawable/plus"/>
+                android:text="시작시간 :"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"/>
+            <Spinner
+                android:id="@+id/spinner_start_hour"
+                android:layout_marginTop="25dp"
+                android:layout_width="90dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:entries="@array/hour_arrays"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="시"
+                android:textSize="15sp"/>
+
+            <Spinner
+                android:id="@+id/spinner_start_minute"
+                android:layout_marginTop="25dp"
+                android:layout_width="90dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:entries="@array/minute_arrays"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:layout_marginTop="30dp"
-                android:id="@+id/text_dialog_end_time"
-                android:layout_width="250dp"
+                android:layout_width="90dp"
                 android:layout_height="wrap_content"
-                android:text="End Time"
-                android:textSize="25sp"
-                android:textAlignment="center"/>
-            <ImageButton
-                android:id="@+id/bt_dialog_end_time"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="28dp"
-                android:background="@null"
-                android:src="@drawable/plus"/>
+                android:text="종료시간 :"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"/>
+            <Spinner
+                android:id="@+id/spinner_end_hour"
+                android:layout_marginTop="25dp"
+                android:layout_width="90dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:entries="@array/hour_arrays"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="시"
+                android:textSize="15sp"/>
+
+            <Spinner
+                android:id="@+id/spinner_end_minute"
+                android:layout_marginTop="25dp"
+                android:layout_width="90dp"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:entries="@array/minute_arrays"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
+
+
         </LinearLayout>
         <Button
             android:id="@+id/bt_dialog_add"
