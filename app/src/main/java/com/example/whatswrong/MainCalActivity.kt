@@ -78,7 +78,7 @@ class MainCalActivity : AppCompatActivity() {
         var arrSubject = listOf<String>(" ")
         testIndex.addOnSuccessListener {
             strIndex=it.value.toString()
-            arrIndex= strIndex.split(" ")
+            arrIndex= strIndex.split(",")
             Log.i("firebase", "Got value ${arrIndex}")
 
         }.addOnFailureListener {
@@ -88,12 +88,12 @@ class MainCalActivity : AppCompatActivity() {
 
 
         var calendarData = mutableMapOf(
-            0 to SchdulerData(0, ""),
+            0 to SchdulerData(null, ""),
         )
 
         testSubject.addOnSuccessListener {
             strSubject=it.value.toString()
-            arrSubject=strSubject.split(" ")
+            arrSubject=strSubject.split(",")
             Log.i("firebase", "Got value ${arrSubject}")
             for(i in 1..arrIndex.size-1){
                 calendarData[arrIndex[i].toInt()] = SchdulerData(arrIndex[i].toInt(),arrSubject[i])
@@ -151,27 +151,6 @@ class MainCalActivity : AppCompatActivity() {
                     cell.setBackgroundColor(BackgroundColors[i%4])
                     cell.findViewById<TextView>(R.id.scheduler_item_subject).text= data?.subject
 
-                    cell.setOnClickListener{
-                        val view = layoutInflater.inflate(R.layout.dialog_scheculer,null)
-                        view.findViewById<EditText>(R.id.dialog_scheduler_subject)
-                            .setText(calendarData[idx]?.subject)
-                        val builder: AlertDialog.Builder = AlertDialog.Builder(this@MainCalActivity)
-                        builder
-                            .setView(view)
-                            .setPositiveButton(
-                                "수정",
-                                DialogInterface.OnClickListener { dialog, index ->
-                                    calendarData[idx]?.subject =
-                                        view.findViewById<EditText>(R.id.dialog_scheduler_subject).text.toString()
-                                    cell.setBackgroundColor(BackgroundColors[j%4])
-                                    refreshCell(calendarData)
-                                })
-                            .setNegativeButton("취소", DialogInterface.OnClickListener { dialog, _ ->
-                                dialog.cancel()
-                            })
-                            .create().show()
-                        return@setOnClickListener
-                    }
                     cell.setOnLongClickListener {
                         val builder = AlertDialog.Builder(this@MainCalActivity)
                         builder.setMessage("삭제하시겠습니까?")
@@ -189,28 +168,28 @@ class MainCalActivity : AppCompatActivity() {
                         return@setOnLongClickListener true
                     }
                 }
-                else{
-                    layout.setOnClickListener {
-                        val view = layoutInflater.inflate(R.layout.dialog_scheculer,null)
-                        val builder : AlertDialog.Builder = AlertDialog.Builder(this@MainCalActivity)
-                        builder
-                            .setView(view)
-                            .setPositiveButton(
-                                "등록",
-                                DialogInterface.OnClickListener { dialog, index ->
-                                    calendarData[idx] = SchdulerData(
-                                        idx,
-                                        view.findViewById<EditText>(R.id.dialog_scheduler_subject).text.toString(),
-                                    )
-                                    layout.setBackgroundColor(BackgroundColors[i%4])
-                                    refreshCell(calendarData)
-                                })
-                            .setNegativeButton("취소", DialogInterface.OnClickListener { dialog, _ ->
-                                dialog.cancel()
-                            })
-                            .create().show()
-                    }
-                }
+//                else{
+//                    layout.setOnClickListener {
+//                        val view = layoutInflater.inflate(R.layout.dialog_scheculer,null)
+//                        val builder : AlertDialog.Builder = AlertDialog.Builder(this@MainCalActivity)
+//                        builder
+//                            .setView(view)
+//                            .setPositiveButton(
+//                                "등록",
+//                                DialogInterface.OnClickListener { dialog, index ->
+//                                    calendarData[idx] = SchdulerData(
+//                                        idx,
+//                                        view.findViewById<EditText>(R.id.dialog_scheduler_subject).text.toString(),
+//                                    )
+//                                    layout.setBackgroundColor(BackgroundColors[i%4])
+//                                    refreshCell(calendarData)
+//                                })
+//                            .setNegativeButton("취소", DialogInterface.OnClickListener { dialog, _ ->
+//                                dialog.cancel()
+//                            })
+//                            .create().show()
+//                    }
+//                }
                 val btCalPlus:ImageButton=findViewById(R.id.btCalPlus)
                 val popup = PopupWindow(this)
                 btCalPlus.setOnClickListener {
@@ -360,9 +339,12 @@ class MainCalActivity : AppCompatActivity() {
                 val layout = createCell(550, 85, j, i, grid1)
                 val cell1: View = layoutInflater.inflate(R.layout.community_by_class, layout)
                 val idx = ((i) * (grid.columnCount - 1)) + (j)
-                val data1 = subjectData[idx].Subject
-                val data2 = subjectData[idx].Code.toString()
-                cell1.findViewById<Button>(R.id.btSubjectCode).text="${data1}/${data2}"
+
+                var data1 = calendarData[idx]?.subject
+                if (calendarData[j]?.subject!=""){
+                    data1=calendarData[j]?.subject
+                }
+                cell1.findViewById<Button>(R.id.btSubjectCode).text="${data1}"
                 cell1.findViewById<Button>(R.id.btSubjectCode).textSize=10f
 
             }
