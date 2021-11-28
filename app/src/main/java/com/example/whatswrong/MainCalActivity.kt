@@ -2,8 +2,8 @@ package com.example.whatswrong
 
 import android.annotation.SuppressLint
 import android.content.DialogInterface
-import android.graphics.Color
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -37,8 +37,10 @@ class MainCalActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main_cal)
 
         mFirebaseAuth = FirebaseAuth.getInstance()
+        val myUid = mFirebaseAuth.uid
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("Whatswrong")
-        val testIndex = mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("index").get()
+
+        val testIndex = mDatabaseRef.child("UserAccount").child(myUid!!).child("index").get()
         var strIndex : String = ""
         var strSubject : String =""
         var arrIndex = listOf<String>(" ")
@@ -51,7 +53,7 @@ class MainCalActivity : AppCompatActivity() {
         }.addOnFailureListener {
             Log.e("firebase", "Error getting data", it)
         }
-        val testSubject = mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("subject").get()
+        val testSubject = mDatabaseRef.child("UserAccount").child(myUid!!).child("subject").get()
 
 
         var calendarData = mutableMapOf(
@@ -145,9 +147,9 @@ class MainCalActivity : AppCompatActivity() {
                                     var tmpIndex : String=""
                                     var tmpSubject : String=""
                                     for (i :Int in 1 until arrIndex.size) tmpIndex ="${tmpIndex},${arrIndex[i]}"
-                                    mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("index").setValue(tmpIndex)
+                                    mDatabaseRef.child("UserAccount").child(myUid!!).child("index").setValue(tmpIndex)
                                     for (i :Int in 1 until arrSubject.size) tmpSubject ="${tmpSubject},${arrSubject[i]}"
-                                    mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("subject").setValue(tmpSubject)
+                                    mDatabaseRef.child("UserAccount").child(myUid!!).child("subject").setValue(tmpSubject)
 
 
 
@@ -258,7 +260,6 @@ class MainCalActivity : AppCompatActivity() {
                         textDays=view.findViewById<Spinner>(R.id.spinner_days).selectedItem.toString()
                         when(textDays){
                             "Mon"->{
-                                if ((endHour.toInt()-stHour.toInt())==1){
                                     when(stHour.toInt()){
                                         9 -> index=0
                                         10 -> index=5
@@ -272,77 +273,55 @@ class MainCalActivity : AppCompatActivity() {
                                         18 -> index=45
                                         19 -> index=50
                                     }
-                                }
-                                if ((endHour.toInt()-stHour.toInt())==2){
-
-                                    when(stHour.toInt()){
-                                        9 -> index=0
-                                        10 -> index=5
-                                        11 -> index=10
-                                        12 -> index=15
-                                        13 -> index=20
-                                        14 -> index=25
-                                        15 -> index=30
-                                        16 -> index=35
-                                        17 -> index=40
-                                        18 -> index=45
-                                        19 -> index=50
-                                    }
-                                }
                             }
                             "Tue"->{
-                                if ((endHour.toInt()-stHour.toInt())==1){
-                                    when(stHour.toInt()){
-                                        9 -> index=1
-                                        10 -> index=6
-                                        11 -> index=11
-                                        12 -> index=16
-                                        13 -> index=21
-                                        14 -> index=26
-                                        15 -> index=31
-                                        16 -> index=36
-                                        17 -> index=41
-                                        18 -> index=46
-                                        19 -> index=51
-                                    }
+                                when(stHour.toInt()){
+                                    9 -> index=1
+                                    10 -> index=6
+                                    11 -> index=11
+                                    12 -> index=16
+                                    13 -> index=21
+                                    14 -> index=26
+                                    15 -> index=31
+                                    16 -> index=36
+                                    17 -> index=41
+                                    18 -> index=46
+                                    19 -> index=51
                                 }
+
                             }
                             "Wed"->{
-                                if ((endHour.toInt()-stHour.toInt())==1){
-                                    when(stHour.toInt()){
-                                        9 -> index=2
-                                        10 -> index=7
-                                        11 -> index=12
-                                        12 -> index=17
-                                        13 -> index=22
-                                        14 -> index=27
-                                        15 -> index=32
-                                        16 -> index=37
-                                        17 -> index=42
-                                        18 -> index=47
-                                        19 -> index=52
-                                    }
+                                when(stHour.toInt()){
+                                    9 -> index=2
+                                    10 -> index=7
+                                    11 -> index=12
+                                    12 -> index=17
+                                    13 -> index=22
+                                    14 -> index=27
+                                    15 -> index=32
+                                    16 -> index=37
+                                    17 -> index=42
+                                    18 -> index=47
+                                    19 -> index=52
                                 }
                             }
                             "Thu"->{
-                                if ((endHour.toInt()-stHour.toInt())==1){
-                                    when(stHour.toInt()){
-                                        9 -> index=3
-                                        10 -> index=8
-                                        11 -> index=13
-                                        12 -> index=18
-                                        13 -> index=23
-                                        14 -> index=28
-                                        15 -> index=33
-                                        16 -> index=38
-                                        17 -> index=43
-                                        18 -> index=48
-                                        19 -> index=53
-                                    }
+                                when(stHour.toInt()){
+                                    9 -> index=3
+                                    10 -> index=8
+                                    11 -> index=13
+                                    12 -> index=18
+                                    13 -> index=23
+                                    14 -> index=28
+                                    15 -> index=33
+                                    16 -> index=38
+                                    17 -> index=43
+                                    18 -> index=48
+                                    19 -> index=53
                                 }
+
                             }
                             "Fri"->{
-                                if ((endHour.toInt()-stHour.toInt())==1){
                                     when(stHour.toInt()){
                                         9 -> index=4
                                         10 -> index=9
@@ -356,7 +335,6 @@ class MainCalActivity : AppCompatActivity() {
                                         18 -> index=49
                                         19 -> index=54
                                     }
-                                }
                             }
                         }
                         calendarData[index] = SchdulerData(
@@ -366,13 +344,21 @@ class MainCalActivity : AppCompatActivity() {
                         var tmpIndex : String=""
                         var tmpSubject : String=""
                         for (i :Int in 0..54) if(calendarData[i]?.index!=null){tmpIndex ="${tmpIndex},${calendarData[i]?.index}"}
-                        mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("index").setValue(tmpIndex)
+                        mDatabaseRef.child("UserAccount").child(myUid!!).child("index").setValue(tmpIndex)
                         for (i :Int in 0..54) if(calendarData[i]?.subject!=null){tmpSubject ="${tmpSubject},${calendarData[i]?.subject}"}
-                        mDatabaseRef.child("UserAccount").child("3SPXSEcQB3e6bD0X8bKM4LbDktF3").child("subject").setValue(tmpSubject)
-                        Toast.makeText(this, "어플리케이션을 재시작하면 \n하단 버튼이 추가됩니다.", Toast.LENGTH_SHORT).show()
+                        mDatabaseRef.child("UserAccount").child(myUid!!).child("subject").setValue(tmpSubject)
 
                         refreshCell(calendarData)
                         popup.dismiss()
+                        try {
+                            val intent = intent
+                            finish() //현재 액티비티 종료 실시
+                            overridePendingTransition(0, 0) //인텐트 애니메이션 없애기
+                            startActivity(intent) //현재 액티비티 재실행 실시
+                            overridePendingTransition(0, 0) //인텐트 애니메이션 없애기
+                        } catch (e: Exception) {
+                            e.printStackTrace()
+                        }
                     }
                     popup.showAsDropDown(btCalPlus)
                 }
