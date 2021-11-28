@@ -36,38 +36,43 @@ class WritePost  : AppCompatActivity(){
         findViewById<Button>(R.id.post_complete).setOnClickListener {
             val postTitle = findViewById<EditText>(R.id.write_title).text.toString()
             val postContent = findViewById<EditText>(R.id.write_content).text.toString()
-            var postUser : String = "dummy"
-            val checkBox : CheckBox = findViewById(R.id.anony)
+            if(postTitle != "" && postContent != "") {
+                var postUser: String = "dummy"
+                val checkBox: CheckBox = findViewById(R.id.anony)
 
-            val now = System.currentTimeMillis();
-            Log.d("test", now.toString())
-            val date = Date(now)
-            val dateFormat = SimpleDateFormat("MM-dd hh:mm")
-            val timezone = TimeZone.getTimeZone("Asia/Seoul")
-            dateFormat.timeZone = timezone
-            val postTime = dateFormat.format(date)
+                val now = System.currentTimeMillis();
+                Log.d("test", now.toString())
+                val date = Date(now)
+                val dateFormat = SimpleDateFormat("MM-dd hh:mm")
+                val timezone = TimeZone.getTimeZone("Asia/Seoul")
+                dateFormat.timeZone = timezone
+                val postTime = dateFormat.format(date)
 
-            Log.d("test", postTime)
+                Log.d("test", postTime)
 
-            if(checkBox.isChecked){
-                postUser = "익명"
-
-                val post = Posts(postTitle, postContent, postUser, postTime,  now.toString())
-
-                myRef.child(now.toString()).setValue(post)
-            } else {
-                nickRef.child("UserAccount").child(myUid!!).get().addOnSuccessListener {
-                    val temp = it.getValue(UserAccount::class.java)
-                    postUser = temp!!.strNickname.toString()
-                    Log.d("nickname", postUser)
+                if (checkBox.isChecked) {
+                    postUser = "익명"
 
                     val post = Posts(postTitle, postContent, postUser, postTime, now.toString())
 
                     myRef.child(now.toString()).setValue(post)
-                }
-            }
+                } else {
+                    nickRef.child("UserAccount").child(myUid!!).get().addOnSuccessListener {
+                        val temp = it.getValue(UserAccount::class.java)
+                        postUser = temp!!.strNickname.toString()
+                        Log.d("nickname", postUser)
 
-            finish()
+                        val post = Posts(postTitle, postContent, postUser, postTime, now.toString())
+
+                        myRef.child(now.toString()).setValue(post)
+                    }
+                }
+                finish()
+            } else if(postTitle == ""){
+                Toast.makeText(this,"제목을 입력하세요",Toast.LENGTH_SHORT).show()
+            } else if(postContent == ""){
+                Toast.makeText(this, "내용을 입력하세요",Toast.LENGTH_SHORT).show()
+            }
         }
 
         findViewById<ImageButton>(R.id.scheduler_button).setOnClickListener {

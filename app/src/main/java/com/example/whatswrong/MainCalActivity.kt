@@ -82,13 +82,25 @@ class MainCalActivity : AppCompatActivity() {
                 for (j: Int in 0 until grid1.columnCount) {
                     if (idx<setSubject.size-1){
                         val layout = createCell(550, 85, j, i, grid1)
-                        val cell1: View = layoutInflater.inflate(R.layout.community_by_class, layout)
+                        val cell1 = Button(this)
+                        //val cell1: View = layoutInflater.inflate(R.layout.community_by_class, layout)
 
                         idx=(i*2) + (j)+1
                         var data1 = setSubject[idx]
-                        cell1.findViewById<Button>(R.id.btSubjectCode).text="${data1}"
-                        cell1.findViewById<Button>(R.id.btSubjectCode).textSize=10f
-
+                        cell1.text="${data1}"
+                        cell1.textSize=10f
+                        cell1.setOnClickListener {
+                            val intent = Intent(this,ClassCommunity::class.java)
+                            intent.putExtra("과목명", "${data1}")
+                            startActivity(intent)
+                        }
+                        val layoutParams = LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.MATCH_PARENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT
+                        )
+                        cell1.setBackgroundDrawable(ContextCompat.getDrawable(this,R.drawable.button_bg))
+                        cell1.layoutParams = layoutParams
+                        layout.addView(cell1)
                     }
 
                 }
