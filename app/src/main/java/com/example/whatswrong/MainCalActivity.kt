@@ -81,7 +81,7 @@ class MainCalActivity : AppCompatActivity() {
             for (i: Int in 0 until grid1.rowCount) {
                 for (j: Int in 0 until grid1.columnCount) {
                     if (idx<setSubject.size-1){
-                        val layout = createCell(550, 85, j, i, grid1)
+                        val layout = createCell(500, 85, j, i, grid1)
                         val cell1 = Button(this)
                         //val cell1: View = layoutInflater.inflate(R.layout.community_by_class, layout)
 
@@ -98,8 +98,9 @@ class MainCalActivity : AppCompatActivity() {
                             LinearLayout.LayoutParams.MATCH_PARENT,
                             LinearLayout.LayoutParams.WRAP_CONTENT
                         )
-                        cell1.setBackgroundDrawable(ContextCompat.getDrawable(this,R.drawable.button_bg))
+                        cell1.setBackgroundDrawable(ContextCompat.getDrawable(this,R.drawable.shadow))
                         cell1.layoutParams = layoutParams
+                        layoutParams.setMargins(5,5,5,5)
                         layout.addView(cell1)
                     }
 
