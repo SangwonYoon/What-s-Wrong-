@@ -187,7 +187,7 @@
       android:id="@+id/et_SignUniv"
       android:layout_width="279dp"
       android:layout_height="35dp"
-      android:maxLength="12"
+      android:maxLength="10"
       android:background="@drawable/radius"
       android:layout_marginBottom="15dp"/>
 

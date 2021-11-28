@@ -133,7 +133,8 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/community_button"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="15dp"/>
 
     <ImageButton
         android:id="@+id/scheduler_button"

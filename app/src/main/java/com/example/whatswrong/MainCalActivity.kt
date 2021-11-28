@@ -236,6 +236,8 @@ class MainCalActivity : AppCompatActivity() {
                         return@setOnLongClickListener true
                     }
                 }
+
+
 //
                 val btCalPlus:ImageButton=findViewById(R.id.btCalPlus)
                 val popup = PopupWindow(this)
@@ -256,7 +258,9 @@ class MainCalActivity : AppCompatActivity() {
                         var textSubject :String = view.findViewById<Spinner>(R.id.spinner_subjects).selectedItem.toString()
                         var textDays : String = ""
                         stHour=view.findViewById<Spinner>(R.id.spinner_start_hour).selectedItem.toString().toInt()
-                        endHour=view.findViewById<Spinner>(R.id.spinner_end_hour).selectedItem.toString().toInt()
+
+
+
                         textDays=view.findViewById<Spinner>(R.id.spinner_days).selectedItem.toString()
                         when(textDays){
                             "Mon"->{
@@ -319,10 +323,9 @@ class MainCalActivity : AppCompatActivity() {
                                     18 -> index=48
                                     19 -> index=53
                                 }
-
                             }
                             "Fri"->{
-                                    when(stHour.toInt()){
+                                when(stHour.toInt()){
                                         9 -> index=4
                                         10 -> index=9
                                         11 -> index=14
@@ -334,7 +337,7 @@ class MainCalActivity : AppCompatActivity() {
                                         17 -> index=44
                                         18 -> index=49
                                         19 -> index=54
-                                    }
+                                }
                             }
                         }
                         calendarData[index] = SchdulerData(

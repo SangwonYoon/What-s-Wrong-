@@ -3,7 +3,6 @@ package com.example.whatswrong
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -42,7 +41,7 @@ class ClassCommunity  : AppCompatActivity(){
                 for(data in p0.children) {
                     val temp_post = data.getValue(Posts::class.java) // Posts class에 기본 생성자가 있어야 함
                     val post = Posts(temp_post?.title.toString(),temp_post?.content.toString(),temp_post?.user.toString(),temp_post?.time.toString(),temp_post?.key.toString())
-                    postList.add(post)
+                    postList.add(0,post)
                 }
                 mAdapter.notifyDataSetChanged()
             }

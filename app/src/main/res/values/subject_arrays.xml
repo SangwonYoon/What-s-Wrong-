@@ -1,21 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="subject_arrays">
-        <item>모바일 프로그래밍</item>
-        <item>컴퓨터 구조</item>
-        <item>이산수학</item>
+
+        <item>객체지향프로그래밍</item>
+        <item>소프트웨어프로젝트1</item>
+        <item>C++프로그래밍</item>
+        <item>객체지향분석및설계</item>
+        <item>객체지향프로그래밍</item>
+        <item>게임소프트웨어</item>
+        <item>공학기초수학</item>
+        <item>네트워크최신기술</item>
+        <item>데이터과학</item>
+        <item>모바일프로그래밍</item>
+        <item>빅데이터플랫폼</item>
+        <item>선형대수</item>
+        <item>소프트웨어디자인패턴</item>
+        <item>소프트웨어프로젝트2</item>
+        <item>시스템최신기술</item>
+        <item>유레카프로젝트</item>
         <item>응용통계학</item>
-        <item>시스템 소프트웨어</item>
-        <item>창업 연계 공학 설계</item>
-        <item>소프트웨어 프로젝트 II</item>
-        <item>알고리즘</item>
-        <item>데이터 마이닝</item>
-        <item>시스템 소프트웨어</item>
-        <item>모바일 프로그래밍</item>
-        <item>컴퓨터 구조</item>
         <item>이산수학</item>
-        <item>응용통계학</item>
-        <item>시스템 소프트웨어</item>
+        <item>인공지능</item>
+        <item>정보검색과데이터마이닝</item>
+        <item>창업연계공학설계입문</item>
+
     </string-array>
 
 </resources>
