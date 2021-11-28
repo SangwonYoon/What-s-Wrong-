@@ -2,11 +2,9 @@ package com.example.whatswrong
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.whatswrong.databinding.ActivityLoginBinding
-import com.example.whatswrong.databinding.ActivitySignupBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -45,9 +43,8 @@ class LoginActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if(task.isSuccessful){
                             val intent_main_cal = Intent(this, MainCalActivity::class.java)
-                            val intent_myInfo = Intent(this, MyInfoActivity::class.java)
                             Toast.makeText(this, "환영합니다.", Toast.LENGTH_SHORT).show()
-                            startActivity(intent_myInfo)
+                            startActivity(intent_main_cal)
                             finish()
                         }else {
                             Toast.makeText(this, "아이디 또는 비밀번호를 확인해주세요.", Toast.LENGTH_SHORT).show()

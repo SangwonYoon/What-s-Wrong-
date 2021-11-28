@@ -5,13 +5,12 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <Button
+        android:id="@+id/btSubjectCode"
         android:layout_width="160dp"
         android:layout_height="35dp"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginStart="5dp"
         android:background="@drawable/shadow"
-        android:text="모바일 프로그래밍 / 과목 코드"
-        android:textSize="10sp"
-        tools:ignore="MissingClass,MissingConstraints" />
+        tools:ignore="MissingClass,MissingConstraints"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

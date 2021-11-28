@@ -85,28 +85,34 @@ class PostActivity  : AppCompatActivity(){
             builder.setView(dialog)
 
             builder.setPositiveButton("완료", DialogInterface.OnClickListener { dialogInterface, i ->
-                val now = System.currentTimeMillis();
-                val date = Date(now)
-                val dateFormat = SimpleDateFormat("MM-dd hh:mm")
-                val timezone = TimeZone.getTimeZone("Asia/Seoul")
-                dateFormat.timeZone = timezone
-                val commentTime = dateFormat.format(date)
+                if(commentContent.text.toString() != "") {
+                    val now = System.currentTimeMillis();
+                    val date = Date(now)
+                    val dateFormat = SimpleDateFormat("MM-dd hh:mm")
+                    val timezone = TimeZone.getTimeZone("Asia/Seoul")
+                    dateFormat.timeZone = timezone
+                    val commentTime = dateFormat.format(date)
 
-                if(checkBox.isChecked){
-                    commentUser = "익명"
-                    val comment = Comments(commentUser, commentContent.text.toString(), commentTime)
-                    commentList.add(comment)
-                    myRef.setValue(commentList)
-                } else {
-                    nickRef.child("UserAccount").child(myUid!!).get().addOnSuccessListener {
-                        val temp = it.getValue(UserAccount::class.java)
-                        commentUser = temp!!.strNickname.toString()
-                        Log.d("nickname", commentUser)
-
-                        val comment = Comments(commentUser, commentContent.text.toString(), commentTime)
+                    if (checkBox.isChecked) {
+                        commentUser = "익명"
+                        val comment =
+                            Comments(commentUser, commentContent.text.toString(), commentTime)
                         commentList.add(comment)
                         myRef.setValue(commentList)
+                    } else {
+                        nickRef.child("UserAccount").child(myUid!!).get().addOnSuccessListener {
+                            val temp = it.getValue(UserAccount::class.java)
+                            commentUser = temp!!.strNickname.toString()
+                            Log.d("nickname", commentUser)
+
+                            val comment =
+                                Comments(commentUser, commentContent.text.toString(), commentTime)
+                            commentList.add(comment)
+                            myRef.setValue(commentList)
+                        }
                     }
+                } else{
+                    Toast.makeText(this,"내용을 입력하세요", Toast.LENGTH_SHORT).show()
                 }
             })
             builder.setNegativeButton("취소", DialogInterface.OnClickListener { dialogInterface, i ->  })

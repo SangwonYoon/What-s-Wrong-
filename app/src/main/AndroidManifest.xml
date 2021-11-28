@@ -9,36 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WhatsWrong">
-
-        <activity android:name=".ClassCommunity"
-          android:exported="true">
-
-
-        </activity>
-
-        <activity android:name=".MyInfoActivity"/>
-
-        <activity android:name=".SignupActivity"/>
-
-        <activity
-            android:name=".MainCalActivity"
-            android:exported="true" />
         <activity
             android:name=".LoginActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".MyCommunity"/>
-        <activity android:name=".MainCommunity"/>
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".ClassCommunity"
+          android:exported="true"/>
+        <activity android:name=".SignupActivity" />
+        <activity android:name=".MyInfoActivity"/>
+        <activity
+            android:name=".MainCalActivity"
+            android:exported="true" />
+        <activity android:name=".MyCommunity" />
+        <activity android:name=".MainCommunity" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".PostActivity"/>
         <activity android:name=".WritePost"/>
     </application>
-
 </manifest>
