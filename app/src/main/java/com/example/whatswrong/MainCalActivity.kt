@@ -57,7 +57,7 @@ class MainCalActivity : AppCompatActivity() {
 
 
         var calendarData = mutableMapOf(
-            0 to SchdulerData(null, ""),
+            -1 to SchdulerData(null, ""),
         )
 
 
@@ -66,6 +66,8 @@ class MainCalActivity : AppCompatActivity() {
             strSubject=it.value.toString()
             arrSubject=strSubject.split(",")
             Log.i("firebase", "Got value ${arrSubject}")
+
+
             for(i in 1..arrIndex.size-1){
                 calendarData[arrIndex[i].toInt()] = SchdulerData(arrIndex[i].toInt(),arrSubject[i])
             }
@@ -143,7 +145,7 @@ class MainCalActivity : AppCompatActivity() {
                 val cell: View = layoutInflater.inflate(R.layout.scheduler_item, layout)
                 val idx = ((i - 1) * (grid.columnCount - 1)) + (j - 1)
                 cells[idx] = cell
-                if (calendarData.containsKey(idx)) {
+                if (calendarData.containsKey(idx)&&calendarData[0]?.index!=null) {
                     val data = calendarData[idx]
                     cell.setBackgroundColor(BackgroundColors[(i*j+i+j*j) % 4])
                     cell.findViewById<TextView>(R.id.scheduler_item_subject).text = data?.subject
@@ -227,7 +229,7 @@ class MainCalActivity : AppCompatActivity() {
                 val cell: View = layoutInflater.inflate(R.layout.scheduler_item, layout)
                 val idx = ((i - 1) * (grid.columnCount - 1)) + (j - 1)
                 cells[idx] = cell
-                if (calendarData.containsKey(idx)){
+                if (calendarData.containsKey(idx)&&calendarData[0]?.index!=null){
                     val data = calendarData[idx]
                     cell.setBackgroundColor(BackgroundColors[(i*j+i+j*j)%4])
                     cell.findViewById<TextView>(R.id.scheduler_item_subject).text= data?.subject
