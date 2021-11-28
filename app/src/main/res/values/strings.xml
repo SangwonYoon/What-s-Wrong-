@@ -31,4 +31,14 @@
     <string name="io_title01">Keynote</string>
     <string name="io_title02">Android: Open to the future</string>
     <string name="io_title03">Wear OS by Google</string>
+    <string name="InfoHelp">
+        국민대학교 21학년도 2학기 모바일프로그래밍 기말프로젝트 \n\n
+        팀원\n
+        \t 신재혁, 김호준,윤상원, 이민정 \n\n
+    </string>
+
+    <string name="FaQ">
+        사용자들의 의견을 수렴받는 중입니다.
+    </string>
+    <string name="myCommu">준비 중 입니다.</string>
 </resources>

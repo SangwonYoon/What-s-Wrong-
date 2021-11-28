@@ -10,7 +10,8 @@ data class UserAccount(
     var strPhone : String? = null,
     var strAddr : String? = null,
     var strUniv : String? = null,
-    var strNickname : String? = null
+    var strNickname : String? = null,
+    var subject : String? = null
 ) {
-    constructor() : this("","","","","","","","")
+    constructor() : this("","","","","","","","", "")
 }

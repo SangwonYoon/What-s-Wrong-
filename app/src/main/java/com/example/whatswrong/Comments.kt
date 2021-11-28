@@ -1,3 +1,5 @@
 package com.example.whatswrong
 
-class Comments (var comment_user: String, var comment_content: String)
+import java.io.Serializable
+
+class Comments (var comment_user: String = "", var comment_content: String = "", var comment_time : String = "")

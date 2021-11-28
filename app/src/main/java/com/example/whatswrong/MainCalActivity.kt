@@ -3,6 +3,7 @@ package com.example.whatswrong
 import android.annotation.SuppressLint
 import android.content.DialogInterface
 import android.graphics.Color
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.*
@@ -385,6 +386,21 @@ class MainCalActivity : AppCompatActivity() {
         }
         val btHor2 :Button = findViewById(R.id.btSchedulerHor2)
         val btHor3 :Button = findViewById(R.id.btSchedulerHor3)
+
+        findViewById<ImageButton>(R.id.scheduler_button).setOnClickListener {
+            val intent = Intent(this, MainCalActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<ImageButton>(R.id.community_button).setOnClickListener {
+            val intent = Intent(this,MyCommunity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<ImageButton>(R.id.user_button).setOnClickListener {
+            val intent = Intent(this,MyInfoActivity::class.java)
+            startActivity(intent)
+        }
 
     }
 

@@ -63,8 +63,8 @@
       android:layout_width="279dp"
       android:layout_height="match_parent"
       android:gravity="right"
-      android:textColor="#FF0000"
-      android:text="TEXT"
+      android:textColor="@color/black"
+      android:text="이메일 중복확인 해주세요."
       android:textSize="10sp"
       android:layout_marginBottom="15dp"/>
 
@@ -123,6 +123,7 @@
       android:layout_width="279dp"
       android:inputType="textPersonName"
       android:layout_height="35dp"
+      android:maxLength="6"
       android:background="@drawable/radius"
       android:layout_marginBottom="15dp"/>
 
@@ -131,7 +132,7 @@
       android:layout_width="279dp"
       android:layout_height="wrap_content"
       android:layout_marginBottom="3dp"
-      android:text="전화번호"
+      android:text="핸드폰번호"
       android:textColor="#000000"
       android:textSize="16sp" />
 
@@ -139,9 +140,21 @@
       android:id="@+id/et_signPhone"
       android:layout_width="279dp"
       android:layout_height="35dp"
+      android:maxLength="13"
       android:inputType="phone"
-      android:layout_marginBottom="15dp"
       android:background="@drawable/radius" />
+
+    <TextView
+      android:id="@+id/tv_phNumber"
+      android:layout_width="279dp"
+      android:layout_height="match_parent"
+      android:gravity="right"
+      android:textColor="@color/black"
+      android:text=" '-' 포함하여 입력해주세요."
+      android:textSize="10sp"
+      android:layout_marginBottom="15dp"/>
+
+
 
     <TextView
       android:id="@+id/tv_signaddress"
@@ -174,6 +187,7 @@
       android:id="@+id/et_SignUniv"
       android:layout_width="279dp"
       android:layout_height="35dp"
+      android:maxLength="12"
       android:background="@drawable/radius"
       android:layout_marginBottom="15dp"/>
 
@@ -190,16 +204,17 @@
       android:id="@+id/et_signNickname"
       android:layout_width="279dp"
       android:layout_height="35dp"
+      android:maxLength="12"
       android:background="@drawable/radius"/>
     <TextView
       android:id="@+id/tv_nicknameMessage"
       android:layout_width="279dp"
       android:layout_height="match_parent"
-      android:textColor="#FF0000"
+      android:textColor="@color/black"
       android:textSize="10sp"
       android:gravity="right"
       android:layout_marginBottom="15dp"
-      android:text="TEXT"/>
+      android:text="닉네임(최대10자)을 입력해주세요."/>
 
     <TextView
       android:id="@+id/personalInfo"
@@ -221,12 +236,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView
           android:layout_width="match_parent"
           android:layout_height="match_parent"
           android:padding="5dp"
-          android:textColor="@color/black"
-          android:text="@string/Info" />
+          android:text="@string/Info"
+          android:textColor="@color/black" />
       </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
@@ -242,7 +258,7 @@
         android:layout_marginRight="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Accept" />
+        android:text="동의" />
 
       <RadioButton
         android:id="@+id/radio_Decline"
@@ -250,7 +266,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:layout_marginBottom="20dp"
-        android:text="Decline" />
+        android:text="비동의" />
     </RadioGroup>
 
     <Button
@@ -260,6 +276,8 @@
       android:background="@drawable/radius"
       android:backgroundTint="#EDF5FF"
       android:text="회원가입"/>
+
+
 
 
 
